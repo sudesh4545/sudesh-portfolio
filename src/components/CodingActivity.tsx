@@ -6,7 +6,6 @@ import liveStats from '../data/live-stats.json';
 import { useCountUp } from '../hooks/useCountUp';
 import { accent as accentMap, accentHex, withAlpha } from '../lib/accents';
 import { cn } from '../lib/cn';
-import { seededRandom } from '../lib/random';
 import type { CodingPlatform } from '../types';
 import { GlassCard } from './GlassCard';
 import { Icon } from './Icon';
@@ -160,9 +159,8 @@ interface Cell {
   filled: boolean;
 }
 
-function useHeatmap(seed: number, weeks: number, liveDays: Array<{ date: string; count: number; level: number }>) {
+function useHeatmap(weeks: number, liveDays: Array<{ date: string; count: number; level: number }>) {
   return useMemo(() => {
-    const random = seededRandom(seed);
     const liveByDate = new Map(liveDays.map((day) => [day.date, day]));
     const today = new Date();
     const end = new Date(today.getFullYear(), today.getMonth(), today.getDate());
@@ -186,11 +184,8 @@ function useHeatmap(seed: number, weeks: number, liveDays: Array<{ date: string;
         const filled = date <= end;
         const dateKey = date.toISOString().slice(0, 10);
         const liveDay = liveByDate.get(dateKey);
-        const bias = date.getDay() === 0 || date.getDay() === 6 ? 0.55 : 1;
-        const roll = random() * bias;
-        const fallbackLevel = !filled ? 0 : roll > 0.86 ? 4 : roll > 0.68 ? 3 : roll > 0.44 ? 2 : roll > 0.22 ? 1 : 0;
-        const level = liveDays.length > 0 ? liveDay?.level ?? 0 : fallbackLevel;
-        const count = liveDays.length > 0 ? liveDay?.count ?? 0 : level === 0 ? 0 : level * 2 + Math.floor(random() * 3);
+        const level = liveDay?.level ?? 0;
+        const count = liveDay?.count ?? 0;
         if (filled) total += count;
 
         if (day === 0) {
@@ -216,7 +211,7 @@ function useHeatmap(seed: number, weeks: number, liveDays: Array<{ date: string;
     }
 
     return { columns, monthLabels, total };
-  }, [liveDays, seed, weeks]);
+  }, [liveDays, weeks]);
 }
 
 type HeatmapData = ReturnType<typeof useHeatmap>;
@@ -367,7 +362,7 @@ function TotalTile({
 
 export function CodingActivity() {
   const { push } = useToast();
-  const heatmap = useHeatmap(githubActivity.seed, githubActivity.weeks, liveStats.github.contributions);
+  const heatmap = useHeatmap(githubActivity.weeks, liveStats.github.contributions);
   const notifyUnavailable = (hint: string) =>
     push({ title: 'Profile not linked', description: hint, variant: 'info' });
 
