@@ -1,0 +1,28 @@
+{
+  "name": "futuristic-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ultra-premium futuristic portfolio for a B.Tech IT student — React + TypeScript + Vite + Tailwind CSS v4 + Framer Motion",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^13.1.1",
+    "lucide-react": "^1.33.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2"
+  }
+}

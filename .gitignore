@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+.vite
+*.log
+npm-debug.log*
+.idea
+.vscode/*
+!.vscode/extensions.json
+futuristic-portfolio.zip

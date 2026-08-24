@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="60%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#D946EF" />
+    </linearGradient>
+    <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8A2BE2" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#02050A" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <circle cx="240" cy="140" r="420" fill="url(#glowA)" />
+  <circle cx="980" cy="520" r="420" fill="url(#glowB)" />
+
+  <g font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif">
+    <text x="90" y="250" font-size="34" letter-spacing="8" fill="#94A3B8">HELLO, I'M</text>
+    <text x="90" y="360" font-size="96" font-weight="700" fill="#F8FAFC">Sudesh Mehar</text>
+    <text x="90" y="425" font-size="30" fill="url(#accent)">
+      B.Tech IT Student | Aspiring Software Engineer | Problem Solver
+    </text>
+    <rect x="90" y="470" width="220" height="4" rx="2" fill="url(#accent)" />
+  </g>
+</svg>

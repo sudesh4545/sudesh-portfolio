@@ -1,0 +1,740 @@
+@import 'tailwindcss';
+
+/* ===========================================================================
+   DESIGN TOKENS
+   The canonical palette. Every component reads from these — change a value
+   here and the whole site follows.
+   =========================================================================== */
+@theme {
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+
+  /* Surfaces */
+  --color-ink: #030512;
+  --color-surface: #0a0d24;
+  --color-surface-2: #12102f;
+
+  /* Neon accents (kept deliberately few + restrained) */
+  --color-brand-cyan: #00f0ff;
+  --color-brand-blue: #387cff;
+  --color-brand-purple: #a855f7;
+  --color-brand-magenta: #ff3bd4;
+
+  /* Text */
+  --color-paper: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-faint: #64748b;
+
+  /* Extra small breakpoint for 320–400px phones */
+  --breakpoint-xs: 25rem;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Raw CSS variables (spec palette) — usable in plain CSS / inline styles */
+:root {
+  --background: #030512;
+  --surface: #0a0d24;
+  --surface-light: #12102f;
+  --cyan: #00f0ff;
+  --purple: #a855f7;
+  --magenta: #ff3bd4;
+  --white: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --trace-start: #00f0ff;
+  --trace-mid: #597bff;
+  --trace-end: #ff3bd4;
+  --grid-x: rgba(0, 240, 255, 0.075);
+  --grid-y: rgba(255, 59, 212, 0.055);
+  --theme-background:
+    radial-gradient(90% 65% at 0% 0%, #071a35 0%, transparent 58%),
+    radial-gradient(75% 60% at 100% 20%, #210929 0%, transparent 62%),
+    radial-gradient(65% 55% at 50% 48%, #02030a 0%, #03040c 52%, transparent 80%),
+    linear-gradient(145deg, #01040b 0%, #03040d 54%, #0d0412 100%);
+  --theme-vignette: radial-gradient(78% 64% at 50% 42%, transparent 30%, rgba(1,3,12,.62) 100%);
+
+  --nav-height: 5.5rem;
+
+  /* Hexagon used by the Core IT Expertise nodes */
+  --hex: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+html[data-theme='dark'] {
+  --color-ink: #080a0f;
+  --color-surface: #10131a;
+  --color-surface-2: #181c25;
+  --color-paper: #f2f4f8;
+  --color-muted: #a1a8b5;
+  --color-faint: #6f7887;
+  --background: #080a0f;
+  --surface: #10131a;
+  --surface-light: #181c25;
+  --white: #f2f4f8;
+  --muted: #a1a8b5;
+  --border: rgba(174, 188, 211, 0.12);
+  --trace-start: #4ddbe8;
+  --trace-mid: #5f7da8;
+  --trace-end: #7e7194;
+  --grid-x: rgba(95, 155, 181, 0.075);
+  --grid-y: rgba(122, 111, 146, 0.055);
+  --theme-background:
+    radial-gradient(80% 65% at 0% 0%, #111d28 0%, transparent 60%),
+    radial-gradient(70% 55% at 100% 18%, #17131d 0%, transparent 64%),
+    linear-gradient(145deg, #07090d 0%, #0a0d12 52%, #0d0c12 100%);
+  --theme-vignette: radial-gradient(76% 62% at 50% 42%, transparent 30%, rgba(0,0,0,.46) 100%);
+}
+
+html[data-theme='light'] {
+  --color-ink: #edf3fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #e7eef9;
+  --color-paper: #111827;
+  --color-muted: #4b5b70;
+  --color-faint: #718096;
+  --color-brand-cyan: #008ca8;
+  --color-brand-blue: #2563eb;
+  --color-brand-purple: #7c3aed;
+  --color-brand-magenta: #d629a4;
+  --background: #edf3fb;
+  --surface: #ffffff;
+  --surface-light: #e7eef9;
+  --cyan: #008ca8;
+  --purple: #7c3aed;
+  --magenta: #d629a4;
+  --white: #111827;
+  --muted: #4b5b70;
+  --border: rgba(31, 58, 94, 0.14);
+  --trace-start: #0891b2;
+  --trace-mid: #5b7cce;
+  --trace-end: #c0269d;
+  --grid-x: rgba(27, 105, 138, 0.09);
+  --grid-y: rgba(157, 57, 139, 0.07);
+  --theme-background:
+    radial-gradient(75% 55% at 0% 0%, #d7f2fa 0%, transparent 65%),
+    radial-gradient(70% 55% at 100% 15%, #f4def2 0%, transparent 67%),
+    linear-gradient(145deg, #f8fbff 0%, #edf3fb 56%, #f7edf7 100%);
+  --theme-vignette: radial-gradient(78% 65% at 50% 42%, transparent 42%, rgba(82,105,138,.11) 100%);
+}
+
+/* ===========================================================================
+   BASE
+   =========================================================================== */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* keeps anchored sections clear of the fixed navbar */
+    scroll-padding-top: var(--nav-height);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Keep all wheel, trackpad, keyboard and thumb dragging fully native. */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(75, 108, 180, 0.9) #04080f;
+  }
+
+  html,
+  body {
+    /* hard guarantee against accidental horizontal scrolling */
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* `optimizeLegibility` can trigger expensive shaping across this long page. */
+    text-rendering: geometricPrecision;
+    overscroll-behavior-y: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--cyan) 30%, transparent);
+    color: var(--white);
+  }
+
+  /* Visible, on-brand focus states everywhere (accessibility) */
+  :focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #04080f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f0ff 0%, #387cff 46%, #ff3bd4 100%);
+    border-radius: 999px;
+    border: 2px solid #04080f;
+    min-height: 32px;
+    box-shadow:
+      0 0 8px 2px rgba(0, 240, 255, 0.95),
+      0 0 16px 4px rgba(138, 43, 226, 0.75),
+      inset 0 0 5px rgba(0, 240, 255, 0.7);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00f0ff 0%, #006dff 42%, #a855f7 100%);
+    box-shadow:
+      0 0 12px 4px rgba(0, 240, 255, 1),
+      0 0 24px 7px rgba(138, 43, 226, 0.95),
+      inset 0 0 7px rgba(0, 240, 255, 0.95);
+  }
+
+  /* Autofill inside glass inputs */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-text-fill-color: var(--white);
+    -webkit-box-shadow: 0 0 0 1000px #0a1420 inset;
+    caret-color: var(--white);
+  }
+}
+
+/* ===========================================================================
+   COMPONENT PRIMITIVES
+   =========================================================================== */
+@layer components {
+  /* --- Glassmorphism -----------------------------------------------------
+     `backdrop-filter` is by far the most expensive thing here, and the cost is
+     PER ELEMENT, largely independent of blur radius. There are ~60 small glass
+     surfaces, and because the fixed background behind them animates (aurora +
+     particles), every one of them re-samples and re-blurs its backdrop on every
+     frame — even when nothing is scrolling. That is the real source of the lag.
+
+     So the many small `.glass` surfaces drop the backdrop blur entirely and lean
+     on a slightly more opaque tint + gradient + border + shadow, which over this
+     near-black palette reads almost identically. Only the handful of large
+     `.glass-panel` surfaces (About / Contact panels, mobile drawer) keep a real
+     backdrop blur, where the see-through frost actually matters and the count is
+     tiny. To bring the frosted see-through back on cards, add
+     `backdrop-filter: blur(8px)` here again. */
+  .glass {
+    background:
+      linear-gradient(145deg, rgba(0, 240, 255, 0.035), transparent 48%, rgba(255, 59, 212, 0.035)),
+      rgba(5, 8, 19, 0.94);
+    border: 1px solid rgba(115, 139, 255, 0.12);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.09),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.35),
+      0 24px 60px -36px rgba(0, 111, 255, 0.25),
+      0 18px 50px -42px rgba(255, 59, 212, 0.2);
+  }
+
+  /* Heavier variant for the large panels (About / Contact) — few enough that a
+     real backdrop blur stays cheap, and big enough that the frost reads. */
+  .glass-panel {
+    background:
+      linear-gradient(145deg, rgba(0, 240, 255, 0.035), transparent 46%, rgba(255, 59, 212, 0.04)),
+      rgba(5, 7, 18, 0.95);
+    /* Real-time backdrop blur on large panels is costly during scrolling.
+       This near-opaque layered surface keeps the same frosted appearance. */
+    border: 1px solid rgba(142, 118, 255, 0.14);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      0 40px 120px -62px rgba(22, 101, 255, 0.3),
+      0 32px 100px -68px rgba(255, 59, 212, 0.3);
+  }
+
+  /* Let the browser skip layout/paint work for sections far outside the
+     viewport. The intrinsic size prevents scroll-bar jumps before first paint. */
+  .portfolio-section {
+    contain: layout;
+  }
+
+  /* Darker inset well (nested cards, form fields, previews) */
+  .glass-well {
+    background: linear-gradient(155deg, rgba(4, 10, 24, 0.92), rgba(12, 5, 20, 0.86));
+    border: 1px solid rgba(111, 127, 255, 0.1);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .theme-background-base {
+    background: var(--theme-background);
+  }
+
+  .theme-vignette {
+    background: var(--theme-vignette);
+  }
+
+  .theme-switcher {
+    border-color: rgba(128, 145, 190, 0.16);
+    background: rgba(7, 10, 24, 0.82);
+  }
+
+  .theme-option-active {
+    color: var(--cyan);
+    background: color-mix(in oklab, var(--cyan) 13%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--cyan) 28%, transparent);
+  }
+
+  /* --- 1px gradient rim, revealed on hover ------------------------------- */
+  .rim {
+    padding: 1px;
+    background: linear-gradient(
+      140deg,
+      color-mix(in oklab, var(--cyan) 60%, transparent) 0%,
+      color-mix(in oklab, var(--purple) 45%, transparent) 42%,
+      transparent 72%
+    );
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+  }
+
+  /* --- Text treatments --------------------------------------------------- */
+  .text-gradient {
+    background-image: linear-gradient(120deg, #ffffff 0%, #cfefff 38%, var(--cyan) 62%, var(--purple) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-accent {
+    background-image: linear-gradient(100deg, var(--cyan) 0%, var(--purple) 55%, var(--magenta) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* --- Backgrounds ------------------------------------------------------- */
+  .cyber-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-x) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-y) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .cyber-grid-fine {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Fine film grain — kills gradient banding on large dark areas */
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+  }
+
+  /* --- Glow helpers ------------------------------------------------------ */
+  .glow-cyan-sm {
+    box-shadow: 0 0 24px -6px rgba(0, 240, 255, 0.45);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 44px -12px rgba(0, 240, 255, 0.55);
+  }
+  .glow-purple {
+    box-shadow: 0 0 44px -12px rgba(138, 43, 226, 0.6);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 18px rgba(0, 240, 255, 0.45);
+  }
+
+  /* --- Misc -------------------------------------------------------------- */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Horizontal edge fade for the scrollable expertise rail on mobile */
+  .fade-x {
+    mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  }
+
+  /* Park every CSS animation inside a block that is scrolled out of view.
+     `useIdleWhenOffscreen` toggles this class from an IntersectionObserver, so
+     the hero's ~22 perpetual animations (and the project cards') cost nothing
+     while the reader is somewhere else on the page — yet look exactly the same
+     the moment they scroll back. `!important` is needed because the `animation`
+     shorthand in the utilities below re-sets play-state to `running`. */
+  .anim-idle,
+  .anim-idle *,
+  .anim-idle *::before,
+  .anim-idle *::after {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Theme-specific surfaces. Kept outside Tailwind layers so these deliberate
+   overrides win without changing component markup or layout. */
+html[data-theme='dark'] .glass,
+html[data-theme='dark'] .glass-panel {
+  background: linear-gradient(145deg, rgba(82, 118, 142, .035), rgba(24, 26, 34, .02)), #0d1016;
+  border-color: rgba(164, 180, 202, .12);
+  box-shadow: inset 0 1px rgba(255,255,255,.045), 0 24px 60px -38px rgba(0,0,0,.8);
+}
+
+html[data-theme='dark'] .glass-well {
+  background: linear-gradient(155deg, #0c1017, #111018);
+  border-color: rgba(164, 180, 202, .1);
+}
+
+html[data-theme='light'] .glass,
+html[data-theme='light'] .glass-panel {
+  background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(241,246,253,.9));
+  border-color: rgba(54, 84, 126, .16);
+  box-shadow: inset 0 1px rgba(255,255,255,.9), 0 22px 55px -38px rgba(38,70,115,.42);
+}
+
+html[data-theme='light'] .glass-well {
+  background: linear-gradient(155deg, rgba(255,255,255,.94), rgba(232,239,249,.88));
+  border-color: rgba(54, 84, 126, .13);
+  box-shadow: inset 0 1px rgba(255,255,255,.85);
+}
+
+html[data-theme='light'] .theme-switcher {
+  background: rgba(255,255,255,.84);
+  border-color: rgba(54,84,126,.16);
+  box-shadow: 0 10px 30px -22px rgba(38,70,115,.5);
+}
+
+html[data-theme='light'] .availability-pill {
+  background: rgba(237, 255, 247, .92);
+  border-color: rgba(16, 135, 89, .2);
+}
+
+html[data-theme='light'] .availability-pill span:last-child {
+  color: #087451 !important;
+}
+
+html[data-theme='light'] .text-ink {
+  color: #07111f !important;
+}
+
+html[data-theme='light'] input,
+html[data-theme='light'] textarea {
+  background: rgba(255,255,255,.88) !important;
+  color: #111827 !important;
+}
+
+html[data-theme='light'] input::placeholder,
+html[data-theme='light'] textarea::placeholder {
+  color: #718096 !important;
+}
+
+html[data-theme='light'] .noise {
+  opacity: .012 !important;
+}
+
+/* ===========================================================================
+   KEYFRAMES  (transform/opacity only — GPU friendly)
+   =========================================================================== */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(3%, -4%, 0);
+  }
+  66% {
+    transform: translate3d(-3%, 3%, 0);
+  }
+}
+
+@keyframes circuit-drift-y {
+  0%, 100% { transform: translate3d(0, -8px, 0); opacity: 0.22; }
+  50% { transform: translate3d(0, 12px, 0); opacity: 0.38; }
+}
+
+@keyframes theme-aurora-float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(22px, -18px, 0) scale(1.06); }
+}
+
+.circuit-drift {
+  /* Full-screen SVG motion repaints the whole viewport while scrolling. */
+  animation: none;
+}
+
+.theme-aurora {
+  /* Keep the colour wash static; movement is focused around the hero brain. */
+  animation: none;
+}
+
+.theme-aurora-pink {
+  animation-delay: -9s;
+  animation-direction: reverse;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@keyframes scan-y {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  88% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes sweep-x {
+  0% {
+    transform: translateX(-140%);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes gradient-pan {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes wave-shift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.anim-float {
+  animation: float-y 7s var(--ease-soft) infinite;
+}
+.anim-drift {
+  animation: drift 26s ease-in-out infinite;
+}
+/* Freeze the drifting aurora when the background is parked (scrolled past the
+   hero / tab hidden). A still background means the glass panels below the fold
+   never have to re-blur their backdrop while the reader scrolls. */
+.bg-frozen .anim-drift {
+  animation-play-state: paused;
+}
+.anim-spin-slow {
+  animation: spin-slow 44s linear infinite;
+}
+.anim-spin-reverse {
+  animation: spin-reverse 62s linear infinite;
+}
+.anim-breathe {
+  animation: breathe 5.5s ease-in-out infinite;
+}
+.anim-dash {
+  stroke-dasharray: 6 10;
+  animation: dash-flow 9s linear infinite;
+}
+.anim-scan {
+  animation: scan-y 7.5s ease-in-out infinite;
+}
+.anim-gradient-pan {
+  background-size: 220% 220%;
+  animation: gradient-pan 9s ease infinite;
+}
+.anim-wave {
+  animation: wave-shift 22s linear infinite;
+}
+.anim-blink {
+  animation: blink-soft 2.4s ease-in-out infinite;
+}
+.anim-pulse-ring {
+  animation: pulse-ring 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Performance lane: during an active native-scroll burst, pause decorative
+   motion and remove expensive paint effects. Everything restores 120ms after
+   scrolling stops. This class never changes scroll position or wheel input. */
+.is-scrolling *,
+.is-scrolling *::before,
+.is-scrolling *::after {
+  animation-play-state: paused !important;
+  transition-duration: 0s !important;
+}
+
+.is-scrolling .nb-brain {
+  filter: none !important;
+}
+
+.is-scrolling .glass,
+.is-scrolling .glass-panel,
+.is-scrolling .glass-well {
+  box-shadow: none !important;
+}
+
+.is-scrolling .theme-aurora,
+.is-scrolling .noise {
+  visibility: hidden;
+}
+
+/* Touch devices benefit much more from responsive scrolling than ambient
+   motion. Keep entrance transitions, but park perpetual decoration. */
+@media (pointer: coarse), (max-width: 900px) {
+  .anim-drift,
+  .anim-float,
+  .anim-spin-slow,
+  .anim-spin-reverse,
+  .anim-breathe,
+  .anim-dash,
+  .anim-scan,
+  .anim-gradient-pan,
+  .anim-wave {
+    animation-play-state: paused !important;
+  }
+
+  .circuit-drift,
+  .theme-aurora {
+    animation-play-state: paused !important;
+  }
+
+  .glass,
+  .glass-panel {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 16px 38px -28px rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* ===========================================================================
+   REDUCED MOTION — honour the OS setting everywhere
+   =========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

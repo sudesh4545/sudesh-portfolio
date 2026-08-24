@@ -1,0 +1,300 @@
+/* ===========================================================================
+   NEURAL BRAIN — hero visual
+   Adapted from the Neural Brain Animation Kit. Every selector keeps the kit's
+   `nb-` prefix so it cannot collide with the site's Tailwind utilities.
+
+   What was kept from the kit: the transparent PNG, the layered cyan/violet
+   glow, the repeating holographic rings, the perspective crosshair, the
+   holographic base platform and the 5s float.
+
+   What was dropped on purpose: the kit's own `</>` / API / DATA / AI badges
+   and its 01–04 focus cards. The Hero already renders both of those from
+   `src/data/portfolio.ts`, so rendering the kit's copies would duplicate them.
+   =========================================================================== */
+
+.nb-stage {
+  --nb-float-duration: 5s;
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1.18;
+  isolation: isolate;
+}
+
+/* Circular atmosphere + repeating holographic rings. */
+.nb-stage::before {
+  content: '';
+  position: absolute;
+  inset: 6% 4% 1%;
+  z-index: -2;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 42%, rgba(0, 240, 255, 0.32), transparent 46%),
+    radial-gradient(circle at 70% 60%, rgba(255, 59, 212, 0.3), transparent 48%),
+    repeating-radial-gradient(circle, transparent 0 48px, rgba(107, 131, 255, 0.2) 49px 50px);
+  filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.3)) drop-shadow(0 0 42px rgba(255, 59, 212, 0.22));
+  opacity: .9;
+}
+
+/* Perspective crosshair on the floor beneath the brain. */
+.nb-stage::after {
+  content: '';
+  position: absolute;
+  inset: 9% 7% 4%;
+  z-index: -1;
+  border-radius: 50%;
+  background-image:
+    linear-gradient(90deg, transparent 49.7%, rgba(75, 199, 255, 0.16) 50%, transparent 50.3%),
+    linear-gradient(transparent 49.7%, rgba(75, 199, 255, 0.13) 50%, transparent 50.3%);
+  transform: perspective(500px) rotateX(63deg) rotateZ(-7deg);
+}
+
+/* Circuit rays and falling data lines extend beyond the brain, matching the
+   reference's energetic neural field while staying behind the content. */
+.nb-circuit-field {
+  position: absolute;
+  inset: -10% -14% -8%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: radial-gradient(circle, #000 18%, rgba(0,0,0,.9) 45%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle, #000 18%, rgba(0,0,0,.9) 45%, transparent 78%);
+  animation: nb-field-breathe 6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.nb-ray {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--nb-ray-length);
+  height: 1px;
+  transform: rotate(var(--nb-ray-angle));
+  transform-origin: left center;
+  background: linear-gradient(90deg, transparent 0 15%, rgba(0,240,255,.75) 42%, rgba(91,124,255,.55) 68%, transparent 100%);
+  box-shadow: 0 0 8px rgba(0, 214, 255, .35);
+  opacity: .2;
+  opacity: .42;
+}
+
+.nb-ray:nth-child(3n) {
+  background: linear-gradient(90deg, transparent 0 15%, rgba(255,59,212,.7) 45%, rgba(132,83,255,.55) 70%, transparent 100%);
+  box-shadow: 0 0 8px rgba(255, 59, 212, .3);
+}
+
+.nb-ray::after {
+  content: '';
+  position: absolute;
+  right: 12%;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.nb-data-stream {
+  position: absolute;
+  left: var(--nb-stream-x);
+  top: -30%;
+  width: 1px;
+  height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(0,240,255,.65), rgba(255,59,212,.28), transparent);
+  box-shadow: 0 0 7px rgba(0, 240, 255, .28);
+  opacity: .38;
+}
+
+@keyframes nb-ray-pulse {
+  0%, 100% { opacity: .08; transform: rotate(var(--nb-ray-angle)) scaleX(.72); }
+  50% { opacity: .65; transform: rotate(var(--nb-ray-angle)) scaleX(1); }
+}
+
+@keyframes nb-field-breathe {
+  0%, 100% { opacity: .62; transform: translate3d(0, 5px, 0) scale(.985); }
+  50% { opacity: 1; transform: translate3d(0, -5px, 0) scale(1.015); }
+}
+
+@keyframes nb-data-fall {
+  from { transform: translateY(-15%); opacity: 0; }
+  18% { opacity: .7; }
+  82% { opacity: .45; }
+  to { transform: translateY(330%); opacity: 0; }
+}
+
+.nb-brain {
+  width: 108%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transform: translateY(-2%);
+  filter: drop-shadow(0 0 14px rgba(0, 240, 255, 0.78)) drop-shadow(0 0 34px rgba(52, 112, 255, 0.5)) drop-shadow(0 0 38px rgba(255, 59, 212, 0.38));
+  animation: nb-brain-float var(--nb-float-duration) ease-in-out infinite;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (pointer: coarse), (max-width: 900px) {
+  .nb-brain,
+  .nb-base,
+  .nb-scan,
+  .nb-particle,
+  .nb-ray,
+  .nb-data-stream,
+  .nb-circuit-field {
+    animation-play-state: paused !important;
+  }
+
+  .nb-brain {
+    filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.48)) drop-shadow(0 0 22px rgba(255, 59, 212, 0.3));
+  }
+}
+
+@keyframes nb-brain-float {
+  50% {
+    transform: translateY(-4%);
+  }
+}
+
+@keyframes nb-atmosphere-pulse {
+  0%, 100% { opacity: 0.72; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+/* Holographic platform the brain hovers over. */
+.nb-base {
+  position: absolute;
+  bottom: 3%;
+  z-index: -1;
+  width: 62%;
+  height: 14%;
+  border-radius: 50%;
+  border: 1px solid rgba(79, 222, 255, 0.7);
+  background: radial-gradient(ellipse, rgba(0, 240, 255, 0.48), rgba(129, 73, 255, 0.2) 42%, transparent 68%);
+  box-shadow:
+    0 0 35px rgba(25, 183, 255, 0.24),
+    inset 0 0 25px rgba(97, 42, 255, 0.18);
+  transform: perspective(260px) rotateX(67deg);
+  animation: nb-base-pulse 3.8s ease-in-out infinite;
+}
+
+@keyframes nb-base-pulse {
+  0%,
+  100% {
+    opacity: 0.76;
+    transform: perspective(260px) rotateX(67deg) scale(.94);
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(260px) rotateX(67deg) scale(1.04);
+  }
+}
+
+/* Slow vertical scan line, clipped to the circular stage. */
+.nb-scan {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nb-scan::before {
+  content: '';
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(39, 224, 255, 0.78), transparent);
+  box-shadow: 0 0 14px rgba(38, 205, 255, 0.56);
+  animation: nb-scan-sweep 4.6s ease-in-out infinite;
+}
+
+@keyframes nb-scan-sweep {
+  0%,
+  100% {
+    top: 18%;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 0.75;
+  }
+  50% {
+    top: 82%;
+    opacity: 1;
+  }
+}
+
+/* Drifting particles (rendered only when motion is allowed). */
+.nb-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nb-particle {
+  position: absolute;
+  left: var(--nb-particle-x, 50%);
+  top: var(--nb-particle-y, 50%);
+  width: var(--nb-particle-size, 3px);
+  height: var(--nb-particle-size, 3px);
+  border-radius: 50%;
+  background: var(--nb-particle-color, #54eaff);
+  box-shadow: 0 0 12px var(--nb-particle-color, #54eaff);
+  animation: nb-particle-drift var(--nb-particle-duration, 3s) ease-in-out infinite;
+  animation-delay: var(--nb-particle-delay, 0s);
+}
+
+@keyframes nb-particle-drift {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translate3d(0, 4px, 0) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(8px, -12px, 0) scale(1.2);
+  }
+}
+
+/* Pointer parallax — desktop pointers only, applied from the component. */
+.nb-stage[data-pointer-active='true'] {
+  transform: perspective(900px) rotateX(var(--nb-tilt-x, 0deg)) rotateY(var(--nb-tilt-y, 0deg));
+  transition: transform 0.18s ease-out;
+}
+
+/* The image is the whole visual, so if it fails to load leave a legible
+   holographic placeholder rather than a broken-image icon. */
+.nb-brain[data-failed='true'] {
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px dashed rgba(44, 209, 255, 0.5);
+  background: radial-gradient(circle, rgba(24, 199, 255, 0.18), transparent 70%);
+  animation: none;
+}
+
+@media (max-width: 720px) {
+  .nb-brain {
+    width: 108%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nb-stage *,
+  .nb-stage::before,
+  .nb-stage::after {
+    animation: none !important;
+  }
+
+  .nb-brain {
+    animation: none !important;
+  }
+}

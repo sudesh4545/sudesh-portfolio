@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="55%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#D946EF" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#02050A" />
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="url(#g)" stroke-opacity="0.55" stroke-width="2" />
+  <!-- A code glyph rather than initials: nothing here has to be kept in sync
+       with your name, and the tab never shows somebody else's letters. -->
+  <text
+    x="32"
+    y="41"
+    text-anchor="middle"
+    font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif"
+    font-size="22"
+    font-weight="700"
+    fill="url(#g)"
+  >
+    &lt;/&gt;
+  </text>
+</svg>
