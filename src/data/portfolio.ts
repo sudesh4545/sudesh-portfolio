@@ -34,6 +34,8 @@ import type {
   Stat,
 } from '../types';
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 /* -------------------------------------------------------------------------- */
 /*  1. PERSONAL                                                               */
 /* -------------------------------------------------------------------------- */
@@ -58,7 +60,7 @@ export const personal: PersonalInfo = {
   resumeUrl: null,
 
   // Add e.g. `/profile.jpg` to `public/`. `null` → premium silhouette avatar.
-  profileImage: '/sudesh-mehar.png',
+  profileImage: publicAsset('sudesh-mehar.png'),
 };
 
 /* -------------------------------------------------------------------------- */
@@ -206,7 +208,7 @@ export const projects: Project[] = [
     longDescription:
       'FitWithSudesh helps users plan workouts, calculate BMI and calories, track water and nutrition, monitor progress and receive practical AI-assisted fitness guidance. The responsive React frontend uses Redux Toolkit and Recharts, while the Express and MongoDB backend handles authentication, validation and persistent user data.',
     preview: 'shop',
-    image: '/projects/fitwithsudesh.png',
+    image: publicAsset('projects/fitwithsudesh.png'),
     technologies: ['React', 'Redux Toolkit', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     features: [
       'Workout Planning',

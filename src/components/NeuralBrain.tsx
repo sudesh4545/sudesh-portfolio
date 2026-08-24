@@ -15,6 +15,7 @@ interface NeuralBrainProps {
 }
 
 const PARTICLE_COLORS = ['#45e6ff', '#68baff', '#a47aff', '#3de3dc'] as const;
+const DEFAULT_BRAIN_SRC = `${import.meta.env.BASE_URL}neural-brain-v2.png`;
 const PARTICLE_COUNT = 8;
 const CIRCUIT_RAYS = Array.from({ length: 14 }, (_, index) => ({
   key: index,
@@ -61,7 +62,7 @@ const PARTICLES = Array.from({ length: PARTICLE_COUNT }, (_, index) => {
  */
 export function NeuralBrain({
   className,
-  src = '/neural-brain-v2.png',
+  src = DEFAULT_BRAIN_SRC,
   label = 'Holographic neural-network brain representing software engineering skills',
 }: NeuralBrainProps) {
   const stageRef = useRef<HTMLDivElement | null>(null);
