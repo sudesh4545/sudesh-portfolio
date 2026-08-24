@@ -2,6 +2,7 @@ import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { ExternalLink, Info } from 'lucide-react';
 import { useMemo, useRef } from 'react';
 import { activityCopy, githubActivity, platforms } from '../data/portfolio';
+import liveStats from '../data/live-stats.json';
 import { useCountUp } from '../hooks/useCountUp';
 import { accent as accentMap, accentHex, withAlpha } from '../lib/accents';
 import { cn } from '../lib/cn';
@@ -386,7 +387,7 @@ export function CodingActivity() {
       </ul>
 
       <p className="mt-3 text-right text-[0.62rem] leading-relaxed text-faint">
-        * HackerRank Top 1% is the rounded whole-percent bracket based on public rank #51,956 and HackerRank's stated 30M-developer community; an exact track percentile is not publicly provided.
+        Auto-synced from public profiles • Last checked {new Date(liveStats.updatedAt).toLocaleString('en-IN')} • HackerRank percentile is a rounded whole-percent estimate.
       </p>
 
       {/* Heatmap + totals */}

@@ -33,6 +33,7 @@ import type {
   SocialLink,
   Stat,
 } from '../types';
+import liveStats from './live-stats.json';
 
 const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
@@ -278,7 +279,7 @@ export const projectsCopy = {
 export const stats: Stat[] = [
   {
     id: 'st-1',
-    value: 3,
+    value: liveStats.leetcode.solved,
     label: 'LeetCode Problems',
     caption: 'Practice journey started',
     icon: 'target',
@@ -288,9 +289,9 @@ export const stats: Stat[] = [
   {
     id: 'st-2',
     value: null,
-    display: 'Top 1%',
+    display: `Top ${liveStats.hackerrank.topPercent}%`,
     label: 'HackerRank Standing',
-    caption: '6★ Problem Solving',
+    caption: `${liveStats.hackerrank.stars}★ Problem Solving`,
     icon: 'star',
     accent: 'purple',
     placeholder: false,
@@ -306,7 +307,7 @@ export const stats: Stat[] = [
   },
   {
     id: 'st-4',
-    value: 3,
+    value: liveStats.github.repositories,
     label: 'Public Repositories',
     caption: 'On GitHub',
     icon: 'boxes',
@@ -315,34 +316,28 @@ export const stats: Stat[] = [
   },
 ];
 
+const certificateAccents = ['cyan', 'purple', 'magenta'] as const;
+const certificateIcons = ['flame', 'award', 'zap'] as const;
+
+const certificateBadges: Badge[] = liveStats.hackerrank.certificates.map((certificate, index) => {
+  const basicMatch = certificate.name.match(/^(.*?)\s*(\(Basic\))$/i);
+  const words = certificate.name.split(/\s+/);
+  const lines: [string, string] = basicMatch
+    ? [basicMatch[1].trim(), basicMatch[2]]
+    : [words.slice(0, -1).join(' ') || words[0], words.length > 1 ? words.at(-1) ?? '' : 'Certificate'];
+  return {
+    id: `hr-${certificate.id}`,
+    lines,
+    caption: 'HackerRank verified',
+    url: certificate.url,
+    icon: certificateIcons[index % certificateIcons.length],
+    accent: certificateAccents[index % certificateAccents.length],
+    placeholder: false,
+  };
+});
+
 export const badges: Badge[] = [
-  {
-    id: 'bd-1',
-    lines: ['CSS', '(Basic)'],
-    caption: 'HackerRank verified',
-    url: 'https://www.hackerrank.com/certificates/aa96f593fc04',
-    icon: 'flame',
-    accent: 'cyan',
-    placeholder: false,
-  },
-  {
-    id: 'bd-2',
-    lines: ['Node', '(Basic)'],
-    caption: 'HackerRank verified',
-    url: 'https://www.hackerrank.com/certificates/746c5a3a1af5',
-    icon: 'award',
-    accent: 'purple',
-    placeholder: false,
-  },
-  {
-    id: 'bd-3',
-    lines: ['Software Engineer', 'Intern'],
-    caption: 'HackerRank verified',
-    url: 'https://www.hackerrank.com/certificates/01f7bf476e9a',
-    icon: 'zap',
-    accent: 'magenta',
-    placeholder: false,
-  },
+  ...certificateBadges,
   {
     id: 'bd-4',
     lines: ['Full Stack', 'Project'],
@@ -366,11 +361,11 @@ export const platforms: CodingPlatform[] = [
     url: 'https://leetcode.com/u/Sudesh4545/',
     icon: 'terminal',
     accent: 'cyan',
-    rank: 'DSA journey started',
+    rank: liveStats.leetcode.ranking ? `Global rank #${liveStats.leetcode.ranking.toLocaleString()}` : 'DSA journey started',
     stats: [
-      { label: 'Solved', value: '3' },
-      { label: 'Acceptance', value: '75%' },
-      { label: 'Active Days', value: '2' },
+      { label: 'Solved', value: String(liveStats.leetcode.solved) },
+      { label: 'Acceptance', value: `${liveStats.leetcode.acceptance}%` },
+      { label: 'Submissions', value: String(liveStats.leetcode.submissions) },
     ],
     trend: [0, 0, 0, 0, 0, 0, 0, 0, 35, 35, 65, 100],
     placeholder: false,
@@ -382,11 +377,11 @@ export const platforms: CodingPlatform[] = [
     url: 'https://www.hackerrank.com/profile/sudeshmehar3',
     icon: 'braces',
     accent: 'purple',
-    rank: 'Top 1% • 6★ Problem Solving',
+    rank: `Top ${liveStats.hackerrank.topPercent}% • ${liveStats.hackerrank.stars}★ Problem Solving`,
     stats: [
-      { label: 'Solved', value: '72' },
-      { label: 'Stars', value: '6★' },
-      { label: 'Global Rank', value: '#51,956' },
+      { label: 'Solved', value: String(liveStats.hackerrank.solved) },
+      { label: 'Stars', value: `${liveStats.hackerrank.stars}★` },
+      { label: 'Global Rank', value: `#${liveStats.hackerrank.rank.toLocaleString()}` },
     ],
     trend: [20, 24, 30, 38, 45, 52, 58, 67, 74, 82, 90, 100],
     placeholder: false,
@@ -400,9 +395,9 @@ export const platforms: CodingPlatform[] = [
     accent: 'magenta',
     rank: 'Building in public',
     stats: [
-      { label: 'Repos', value: '3' },
-      { label: 'Stars', value: '6' },
-      { label: 'Followers', value: '1' },
+      { label: 'Repos', value: String(liveStats.github.repositories) },
+      { label: 'Stars', value: String(liveStats.github.stars) },
+      { label: 'Followers', value: String(liveStats.github.followers) },
     ],
     trend: [10, 12, 18, 25, 30, 36, 45, 52, 60, 70, 84, 100],
     placeholder: false,
@@ -413,9 +408,9 @@ export const githubActivity: GitHubActivity = {
   seed: 20260823, // change to reshuffle the sample heatmap
   weeks: 0,
   totals: [
-    { id: 'ga-1', label: 'Repositories', value: 3, icon: 'folderGit', accent: 'cyan' },
-    { id: 'ga-2', label: 'Profile Stars', value: 6, icon: 'star', accent: 'purple' },
-    { id: 'ga-3', label: 'Followers', value: 1, icon: 'activity', accent: 'magenta' },
+    { id: 'ga-1', label: 'Repositories', value: liveStats.github.repositories, icon: 'folderGit', accent: 'cyan' },
+    { id: 'ga-2', label: 'Profile Stars', value: liveStats.github.stars, icon: 'star', accent: 'purple' },
+    { id: 'ga-3', label: 'Followers', value: liveStats.github.followers, icon: 'activity', accent: 'magenta' },
     { id: 'ga-4', label: 'Completed Projects', value: 1, icon: 'boxes', accent: 'blue' },
   ],
   placeholder: false,

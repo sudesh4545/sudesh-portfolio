@@ -3,6 +3,8 @@ name: Deploy portfolio to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '17 */4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,6 +31,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Sync public coding profiles
+        run: npm run sync:profiles
 
       - name: Build portfolio
         run: npm run build

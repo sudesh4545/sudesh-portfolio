@@ -1,0 +1,37 @@
+{
+  "updatedAt": "2026-08-24T16:03:43.799Z",
+  "leetcode": {
+    "solved": 3,
+    "submissions": 3,
+    "acceptance": 100,
+    "ranking": 5000001
+  },
+  "hackerrank": {
+    "solved": 72,
+    "stars": 6,
+    "rank": 51956,
+    "topPercent": 1,
+    "certificates": [
+      {
+        "id": "aa96f593fc04",
+        "name": "CSS (Basic)",
+        "url": "https://www.hackerrank.com/certificates/aa96f593fc04"
+      },
+      {
+        "id": "746c5a3a1af5",
+        "name": "Node (Basic)",
+        "url": "https://www.hackerrank.com/certificates/746c5a3a1af5"
+      },
+      {
+        "id": "01f7bf476e9a",
+        "name": "Software Engineer Intern",
+        "url": "https://www.hackerrank.com/certificates/01f7bf476e9a"
+      }
+    ]
+  },
+  "github": {
+    "repositories": 4,
+    "followers": 1,
+    "stars": 4
+  }
+}

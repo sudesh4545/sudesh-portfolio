@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "sync:profiles": "node scripts/sync-profile-stats.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
