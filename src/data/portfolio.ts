@@ -60,7 +60,7 @@ export const personal: PersonalInfo = {
   resumeUrl: null,
 
   // Add e.g. `/profile.jpg` to `public/`. `null` → premium silhouette avatar.
-  profileImage: publicAsset('sudesh-mehar-enhanced.png'),
+  profileImage: publicAsset('sudesh-mehar-natural-v2.png'),
 };
 
 /* -------------------------------------------------------------------------- */
