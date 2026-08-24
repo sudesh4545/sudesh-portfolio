@@ -406,7 +406,7 @@ export const platforms: CodingPlatform[] = [
 
 export const githubActivity: GitHubActivity = {
   seed: 20260823, // change to reshuffle the sample heatmap
-  weeks: 0,
+  weeks: 53,
   totals: [
     { id: 'ga-1', label: 'Repositories', value: liveStats.github.repositories, icon: 'folderGit', accent: 'cyan' },
     { id: 'ga-2', label: 'Profile Stars', value: liveStats.github.stars, icon: 'star', accent: 'purple' },

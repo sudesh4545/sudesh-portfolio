@@ -63,16 +63,31 @@ async function getHackerRank() {
 }
 
 async function getGitHub() {
-  const [user, repositories] = await Promise.all([
+  const [user, repositories, contributionResponse] = await Promise.all([
     fetchJson('https://api.github.com/users/sudesh4545', { headers: { accept: 'application/vnd.github+json' } }),
     fetchJson('https://api.github.com/users/sudesh4545/repos?per_page=100&type=owner', {
       headers: { accept: 'application/vnd.github+json' },
     }),
+    fetch('https://github.com/users/sudesh4545/contributions', { headers }),
   ]);
+  if (!contributionResponse.ok) throw new Error(`GitHub contributions returned ${contributionResponse.status}`);
+  const contributionHtml = await contributionResponse.text();
+  const dayPattern = /<td[^>]*data-date="([^"]+)"[^>]*data-level="(\d+)"[^>]*>[\s\S]*?<\/td>\s*<tool-tip[^>]*>([^<]+)<\/tool-tip>/gi;
+  const contributions = [...contributionHtml.matchAll(dayPattern)].map((match) => {
+    const countMatch = match[3].match(/^([\d,]+) contributions?/i);
+    return {
+      date: match[1],
+      count: countMatch ? Number(countMatch[1].replaceAll(',', '')) : 0,
+      level: Number(match[2]),
+    };
+  });
+  if (contributions.length < 300) throw new Error('GitHub contribution calendar data missing');
   return {
     repositories: user.public_repos,
     followers: user.followers,
     stars: repositories.reduce((total, repository) => total + repository.stargazers_count, 0),
+    totalContributions: contributions.reduce((total, day) => total + day.count, 0),
+    contributions,
   };
 }
 
