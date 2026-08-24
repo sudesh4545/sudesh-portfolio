@@ -14,7 +14,10 @@ async function getLeetCode() {
   const query = `query userPublicProfile($username: String!) {
     matchedUser(username: $username) {
       profile { ranking }
-      submitStatsGlobal { acSubmissionNum { difficulty count submissions } }
+      submitStatsGlobal {
+        acSubmissionNum { difficulty count submissions }
+        totalSubmissionNum { difficulty count submissions }
+      }
     }
   }`;
   const payload = await fetchJson('https://leetcode.com/graphql/', {
@@ -23,12 +26,13 @@ async function getLeetCode() {
     body: JSON.stringify({ query, variables: { username: 'Sudesh4545' } }),
   });
   const user = payload.data?.matchedUser;
-  const all = user?.submitStatsGlobal?.acSubmissionNum?.find((item) => item.difficulty === 'All');
-  if (!user || !all) throw new Error('LeetCode profile data missing');
+  const accepted = user?.submitStatsGlobal?.acSubmissionNum?.find((item) => item.difficulty === 'All');
+  const total = user?.submitStatsGlobal?.totalSubmissionNum?.find((item) => item.difficulty === 'All');
+  if (!user || !accepted || !total) throw new Error('LeetCode profile data missing');
   return {
-    solved: all.count,
-    submissions: all.submissions,
-    acceptance: all.submissions ? Math.round((all.count / all.submissions) * 100) : 0,
+    solved: accepted.count,
+    submissions: total.submissions,
+    acceptance: total.submissions ? Math.round((accepted.submissions / total.submissions) * 100) : 0,
     ranking: user.profile?.ranking ?? null,
   };
 }
