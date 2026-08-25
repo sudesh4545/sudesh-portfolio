@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-08-24T16:31:06.940Z",
+  "updatedAt": "2026-08-25T00:25:37.135Z",
   "leetcode": {
-    "solved": 3,
-    "submissions": 4,
-    "acceptance": 75,
+    "solved": 10,
+    "submissions": 11,
+    "acceptance": 91,
     "ranking": 5000001
   },
   "hackerrank": {
     "solved": 72,
     "stars": 6,
-    "rank": 51956,
+    "rank": 51958,
     "topPercent": 1,
     "certificates": [
       {
@@ -26,14 +26,24 @@
         "id": "01f7bf476e9a",
         "name": "Software Engineer Intern",
         "url": "https://www.hackerrank.com/certificates/01f7bf476e9a"
+      },
+      {
+        "id": "f54c1ab68585",
+        "name": "Frontend Developer (React)",
+        "url": "https://www.hackerrank.com/certificates/f54c1ab68585"
+      },
+      {
+        "id": "400ce6fddd87",
+        "name": "Node.js (Intermediate)",
+        "url": "https://www.hackerrank.com/certificates/400ce6fddd87"
       }
     ]
   },
   "github": {
     "repositories": 3,
-    "followers": 1,
-    "stars": 3,
-    "totalContributions": 14,
+    "followers": 2,
+    "stars": 6,
+    "totalContributions": 17,
     "contributions": [
       {
         "date": "2025-08-24",
@@ -562,7 +572,7 @@
       },
       {
         "date": "2026-08-24",
-        "count": 8,
+        "count": 11,
         "level": 4
       },
       {
@@ -822,6 +832,11 @@
       },
       {
         "date": "2026-08-18",
+        "count": 0,
+        "level": 0
+      },
+      {
+        "date": "2026-08-25",
         "count": 0,
         "level": 0
       },
