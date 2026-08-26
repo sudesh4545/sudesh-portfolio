@@ -162,7 +162,7 @@ export const aboutHighlights: AboutHighlight[] = [
     accent: 'cyan',
   },
   { id: 'ah-2', label: 'Focus', lines: ['Software', 'Engineering'], icon: 'cpu', accent: 'purple' },
-  { id: 'ah-3', label: 'Interest', lines: ['Full Stack • AI', 'Web • Systems'], icon: 'compass', accent: 'magenta' },
+  { id: 'ah-3', label: 'Interest', lines: ['Full Stack • Web', 'Software • Systems'], icon: 'compass', accent: 'magenta' },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -205,9 +205,9 @@ export const projects: Project[] = [
     title: 'FitWithSudesh',
     subtitle: 'MERN • Fitness Platform',
     description:
-      'A full-stack fitness workspace combining workout planning, hydration, nutrition, progress tracking and an AI-powered coaching experience.',
+      'A full-stack fitness workspace combining workout planning, hydration, nutrition, progress tracking and a personalized coaching experience.',
     longDescription:
-      'FitWithSudesh helps users plan workouts, calculate BMI and calories, track water and nutrition, monitor progress and receive practical AI-assisted fitness guidance. The responsive React frontend uses Redux Toolkit and Recharts, while the Express and MongoDB backend handles authentication, validation and persistent user data.',
+      'FitWithSudesh helps users plan workouts, calculate BMI and calories, track water and nutrition, monitor progress and receive practical personalized fitness guidance. The responsive React frontend uses Redux Toolkit and Recharts, while the Express and MongoDB backend handles authentication, validation and persistent user data.',
     preview: 'shop',
     image: publicAsset('projects/fitwithsudesh.png'),
     technologies: ['React', 'Redux Toolkit', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
@@ -215,7 +215,7 @@ export const projects: Project[] = [
       'Workout Planning',
       'BMI & Calorie Calculators',
       'Hydration & Nutrition Tracking',
-      'AI Fitness Coach',
+      'Personalized Fitness Coach',
       'Progress Analytics',
       'Secure Authentication',
     ],

@@ -7,7 +7,7 @@
    glow, the repeating holographic rings, the perspective crosshair, the
    holographic base platform and the 5s float.
 
-   What was dropped on purpose: the kit's own `</>` / API / DATA / AI badges
+   What was dropped on purpose: the kit's own `</>` / API / DATA / DEV badges
    and its 01–04 focus cards. The Hero already renders both of those from
    `src/data/portfolio.ts`, so rendering the kit's copies would duplicate them.
    =========================================================================== */

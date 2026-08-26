@@ -57,7 +57,7 @@ const PARTICLES = Array.from({ length: PARTICLE_COUNT }, (_, index) => {
  * The hero's holographic brain: a transparent PNG lit by layered cyan/violet
  * glow, holographic rings, a perspective crosshair and a floating platform.
  *
- * The `</>`, API, DATA and AI badges and the 01–04 capability cards are NOT
+ * The `</>`, API, DATA and DEV badges and the 01–04 capability cards are NOT
  * rendered here — the Hero owns those, driven by `src/data/portfolio.ts`.
  */
 export function NeuralBrain({

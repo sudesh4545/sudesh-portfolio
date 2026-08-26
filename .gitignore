@@ -12,4 +12,5 @@ npm-debug.log*
 .idea
 .vscode/*
 !.vscode/extensions.json
-futuristic-portfolio.zip
+*.zip
+futuristic-portfolio-run/

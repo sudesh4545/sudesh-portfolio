@@ -19,7 +19,7 @@ const FLOATING_TAGS = [
   { label: 'API', className: 'right-[1%] top-[24%]', delay: '-0.8s', tone: 'text-brand-cyan' },
   { label: 'API', className: 'left-[1%] top-[52%]', delay: '-3.2s', tone: 'text-[#b07bff]' },
   { label: 'DATA', className: 'left-[8%] bottom-[16%]', delay: '-2s', tone: 'text-brand-cyan' },
-  { label: 'AI', className: 'right-[6%] bottom-[20%]', delay: '-4s', tone: 'text-[#e879f9]' },
+  { label: 'DEV', className: 'right-[6%] bottom-[20%]', delay: '-4s', tone: 'text-[#e879f9]' },
 ] as const;
 
 export function Hero() {
