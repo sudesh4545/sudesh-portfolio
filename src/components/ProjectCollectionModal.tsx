@@ -24,7 +24,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
   return (
     <AnimatePresence>
       {collection && (
-        <div className="fixed inset-0 z-[140] flex items-end justify-center p-0 sm:items-center sm:p-6">
+        <div className="fixed inset-0 z-[140] flex items-end justify-center overscroll-none p-0 sm:items-center sm:p-6">
           <motion.button
             type="button"
             tabIndex={-1}
@@ -46,9 +46,9 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.985 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel relative z-10 flex max-h-[94svh] w-full max-w-5xl flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl"
+            className="glass-panel relative z-10 max-h-[94dvh] w-full max-w-5xl touch-pan-y overflow-y-auto overscroll-contain rounded-t-3xl sm:rounded-3xl"
           >
-            <div className="flex items-start justify-between gap-5 border-b border-white/[0.07] p-5 sm:p-7">
+            <div className="sticky top-0 z-20 flex items-start justify-between gap-5 border-b border-white/[0.07] bg-ink/90 p-5 backdrop-blur-xl sm:p-7">
               <div className="flex min-w-0 items-start gap-4">
                 <span className={cn('hidden size-12 shrink-0 items-center justify-center rounded-2xl border sm:flex', accentMap[collection.accent].chip)}>
                   <Icon name={collection.icon} className="size-5" />
@@ -75,7 +75,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
               </button>
             </div>
 
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-5 sm:p-7">
+            <div className="p-5 sm:p-7">
               <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {collection.items.map((item) => (
                   <li key={item.id} className="glass-well flex min-h-48 flex-col rounded-2xl p-5">
