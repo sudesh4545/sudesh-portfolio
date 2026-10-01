@@ -24,7 +24,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
   return (
     <AnimatePresence>
       {collection && (
-        <div className="fixed inset-0 z-[140] flex items-end justify-center overscroll-none p-0 sm:items-center sm:p-6">
+        <div className="fixed inset-0 z-[140] flex items-center justify-center overscroll-none p-3 sm:p-6">
           <motion.button
             type="button"
             tabIndex={-1}
@@ -46,7 +46,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.985 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel relative z-10 max-h-[94dvh] w-full max-w-5xl touch-pan-y overflow-y-auto overscroll-contain rounded-t-3xl sm:rounded-3xl"
+            className="glass-panel relative z-10 max-h-[94dvh] w-full max-w-5xl touch-pan-y overflow-y-auto overscroll-contain rounded-3xl"
           >
             <div className="sticky top-0 z-20 flex items-start justify-between gap-5 border-b border-white/[0.07] bg-ink/90 p-5 backdrop-blur-xl sm:p-7">
               <div className="flex min-w-0 items-start gap-4">
