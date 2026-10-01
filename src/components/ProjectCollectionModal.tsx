@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Clock3, ExternalLink, X } from 'lucide-react';
 import { useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useFocusTrap } from '../hooks/useFocusTrap';
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll';
 import { accent as accentMap } from '../lib/accents';
@@ -21,7 +22,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
   useLockBodyScroll(open);
   useFocusTrap(panelRef, open, onClose);
 
-  return (
+  const modal = (
     <AnimatePresence>
       {collection && (
         <div className="fixed inset-0 z-[140] flex items-center justify-center overscroll-none p-3 sm:p-6">
@@ -112,4 +113,6 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
       )}
     </AnimatePresence>
   );
+
+  return typeof document === 'undefined' ? null : createPortal(modal, document.body);
 }
