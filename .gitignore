@@ -14,3 +14,4 @@ npm-debug.log*
 !.vscode/extensions.json
 *.zip
 futuristic-portfolio-run/
+projects/

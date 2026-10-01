@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Air Pointer — Interactive Hand Tracking Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a href="../../#projects">← Portfolio</a><strong>AIR<span>//</span>POINTER</strong><a href="https://github.com/sudesh4545/Air-Pointer" target="_blank" rel="noopener">Desktop source ↗</a></header>
+  <main>
+    <div class="intro"><p class="eyebrow">COMPUTER VISION · INTERACTIVE DEMO</p><h1>Your hand. Your cursor.</h1><p>Try the hand-tracking engine in your browser. Point to move the cursor; pinch your thumb and index finger to hit targets. The Windows app also controls the system mouse, dragging and scrolling.</p></div>
+    <div class="workspace">
+      <section class="camera"><video id="camera" autoplay muted playsinline></video><canvas id="landmarks"></canvas><div id="empty">Start camera to track your hand<br><small>You can also try the targets with your mouse.</small></div><span id="status" role="status" aria-live="polite">Camera off</span></section>
+      <section class="playground" id="playground" aria-label="Gesture target playground"><div class="score">TARGETS HIT <strong id="score">0</strong></div><button id="target" type="button" aria-label="Hit the target">+</button><div id="cursor" hidden></div><p>Point → move · Pinch → click</p></section>
+    </div>
+    <div class="controls"><button id="start" type="button">Start camera</button><button id="stop" type="button" disabled>Stop camera</button><button id="reset" type="button">Reset score</button><label>Stability <input id="stability" type="range" min="0.1" max="0.6" step="0.05" value="0.25"></label></div>
+    <p class="note">Camera frames are processed locally, never uploaded. The tracking library and model download when you press Start. This browser demo moves the on-page cursor; system mouse control runs in the Windows desktop app. Press Escape to stop the camera.</p>
+    <details><summary>Run the complete Windows app</summary><p>Download the source from GitHub, install Node.js, then run <code>npm ci</code> and <code>npm start</code> inside the downloaded project folder. Create the Windows installer with <code>npm run dist:win</code>.</p></details>
+  </main><script type="module" src="demo.js"></script>
+</body></html>

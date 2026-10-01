@@ -1,21 +1,26 @@
 {
-  "updatedAt": "2026-08-25T00:25:37.135Z",
+  "updatedAt": "2026-10-01T09:25:56.278Z",
   "leetcode": {
-    "solved": 10,
-    "submissions": 11,
-    "acceptance": 91,
-    "ranking": 5000001
+    "solved": 39,
+    "submissions": 47,
+    "acceptance": 98,
+    "ranking": 3205194
   },
   "hackerrank": {
-    "solved": 72,
+    "solved": 77,
     "stars": 6,
-    "rank": 51958,
+    "rank": 40632,
     "topPercent": 1,
     "certificates": [
       {
         "id": "aa96f593fc04",
         "name": "CSS (Basic)",
         "url": "https://www.hackerrank.com/certificates/aa96f593fc04"
+      },
+      {
+        "id": "ef93dfc77115",
+        "name": "Software Engineer",
+        "url": "https://www.hackerrank.com/certificates/ef93dfc77115"
       },
       {
         "id": "746c5a3a1af5",
@@ -40,36 +45,11 @@
     ]
   },
   "github": {
-    "repositories": 3,
-    "followers": 2,
-    "stars": 6,
-    "totalContributions": 17,
+    "repositories": 6,
+    "followers": 8,
+    "stars": 14,
+    "totalContributions": 69,
     "contributions": [
-      {
-        "date": "2025-08-24",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-08-31",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-07",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-14",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-21",
-        "count": 0,
-        "level": 0
-      },
       {
         "date": "2025-09-28",
         "count": 0,
@@ -311,27 +291,27 @@
         "level": 0
       },
       {
-        "date": "2025-08-25",
+        "date": "2026-08-30",
+        "count": 11,
+        "level": 4
+      },
+      {
+        "date": "2026-09-06",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-01",
+        "date": "2026-09-13",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-08",
+        "date": "2026-09-20",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-15",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-22",
+        "date": "2026-09-27",
         "count": 0,
         "level": 0
       },
@@ -576,27 +556,27 @@
         "level": 4
       },
       {
-        "date": "2025-08-26",
+        "date": "2026-08-31",
+        "count": 13,
+        "level": 4
+      },
+      {
+        "date": "2026-09-07",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-02",
+        "date": "2026-09-14",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-09",
+        "date": "2026-09-21",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-16",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-23",
+        "date": "2026-09-28",
         "count": 0,
         "level": 0
       },
@@ -837,31 +817,31 @@
       },
       {
         "date": "2026-08-25",
+        "count": 2,
+        "level": 1
+      },
+      {
+        "date": "2026-09-01",
+        "count": 7,
+        "level": 3
+      },
+      {
+        "date": "2026-09-08",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-08-27",
+        "date": "2026-09-15",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-03",
+        "date": "2026-09-22",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-10",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-17",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-24",
+        "date": "2026-09-29",
         "count": 0,
         "level": 0
       },
@@ -1101,27 +1081,32 @@
         "level": 0
       },
       {
-        "date": "2025-08-28",
+        "date": "2026-08-26",
+        "count": 1,
+        "level": 1
+      },
+      {
+        "date": "2026-09-02",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-04",
+        "date": "2026-09-09",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-11",
+        "date": "2026-09-16",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-18",
+        "date": "2026-09-23",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-25",
+        "date": "2026-09-30",
         "count": 0,
         "level": 0
       },
@@ -1361,29 +1346,34 @@
         "level": 1
       },
       {
-        "date": "2025-08-29",
+        "date": "2026-08-27",
+        "count": 1,
+        "level": 1
+      },
+      {
+        "date": "2026-09-03",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-05",
+        "date": "2026-09-10",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-12",
+        "date": "2026-09-17",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-19",
+        "date": "2026-09-24",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-26",
-        "count": 0,
-        "level": 0
+        "date": "2026-10-01",
+        "count": 2,
+        "level": 1
       },
       {
         "date": "2025-10-03",
@@ -1621,27 +1611,27 @@
         "level": 0
       },
       {
-        "date": "2025-08-30",
+        "date": "2026-08-28",
+        "count": 2,
+        "level": 1
+      },
+      {
+        "date": "2026-09-04",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-06",
+        "date": "2026-09-11",
+        "count": 1,
+        "level": 1
+      },
+      {
+        "date": "2026-09-18",
         "count": 0,
         "level": 0
       },
       {
-        "date": "2025-09-13",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-20",
-        "count": 0,
-        "level": 0
-      },
-      {
-        "date": "2025-09-27",
+        "date": "2026-09-25",
         "count": 0,
         "level": 0
       },
@@ -1877,6 +1867,31 @@
       },
       {
         "date": "2026-08-22",
+        "count": 0,
+        "level": 0
+      },
+      {
+        "date": "2026-08-29",
+        "count": 12,
+        "level": 4
+      },
+      {
+        "date": "2026-09-05",
+        "count": 0,
+        "level": 0
+      },
+      {
+        "date": "2026-09-12",
+        "count": 0,
+        "level": 0
+      },
+      {
+        "date": "2026-09-19",
+        "count": 0,
+        "level": 0
+      },
+      {
+        "date": "2026-09-26",
         "count": 0,
         "level": 0
       }
