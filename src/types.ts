@@ -155,6 +155,27 @@ export interface Project {
   accent: Accent;
 }
 
+export interface ProjectCollectionItem {
+  id: string;
+  index: string;
+  title: string;
+  description: string;
+  status: 'coming-soon' | 'published';
+  technologies: string[];
+  demoUrl: string | null;
+  githubUrl: string | null;
+}
+
+export interface ProjectCollection {
+  id: 'small-projects' | 'mini-projects';
+  eyebrow: string;
+  title: string;
+  description: string;
+  icon: IconKey;
+  accent: Accent;
+  items: ProjectCollectionItem[];
+}
+
 export interface Stat {
   id: string;
   /** Numeric target for the count-up animation. `null` = show `display` as-is. */

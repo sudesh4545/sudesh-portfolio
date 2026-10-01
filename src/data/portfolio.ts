@@ -29,6 +29,7 @@ import type {
   NavLink,
   PersonalInfo,
   Project,
+  ProjectCollection,
   Skill,
   SocialLink,
   Stat,
@@ -277,6 +278,43 @@ export const projectsCopy = {
   heading: 'Impactful Creations',
   subheading: 'Selected projects built through code, experimentation and problem solving.',
 };
+
+const comingSoonProjects = (prefix: 'small' | 'mini', label: string) =>
+  Array.from({ length: 10 }, (_, index) => ({
+    id: `${prefix}-${index + 1}`,
+    index: String(index + 1).padStart(2, '0'),
+    title: `${label} ${String(index + 1).padStart(2, '0')}`,
+    description: 'A new build will be added here with its overview, technology stack, live demo and source code.',
+    status: 'coming-soon' as const,
+    technologies: ['Coming Soon'],
+    demoUrl: null,
+    githubUrl: null,
+  }));
+
+/**
+ * Secondary project collections. Replace any generated item with real project
+ * details when it is ready; the collection modal and links update automatically.
+ */
+export const projectCollections: ProjectCollection[] = [
+  {
+    id: 'small-projects',
+    eyebrow: 'Quick Builds',
+    title: 'Small Projects',
+    description: 'Focused builds, UI experiments and practical utilities created to sharpen individual skills.',
+    icon: 'puzzle',
+    accent: 'cyan',
+    items: comingSoonProjects('small', 'Small Project'),
+  },
+  {
+    id: 'mini-projects',
+    eyebrow: 'Compact Products',
+    title: 'Mini Projects',
+    description: 'Compact end-to-end applications that combine multiple concepts into complete working experiences.',
+    icon: 'layers',
+    accent: 'purple',
+    items: comingSoonProjects('mini', 'Mini Project'),
+  },
+];
 
 /* -------------------------------------------------------------------------- */
 /*  9. ACHIEVEMENTS — SAMPLE VALUES, replace with your real numbers           */
