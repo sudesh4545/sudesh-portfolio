@@ -42,6 +42,20 @@
       ],
       "demoUrl": null,
       "githubUrl": "https://github.com/sudesh4545/mini-focus-counter-aa108b"
+    },
+    {
+      "id": "c46edd70-db3e-4e08-87b2-371083722606",
+      "index": "04",
+      "title": "Quick Notes",
+      "description": "A lightweight notes app with automatic local saving and a live word count.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": null,
+      "githubUrl": "https://github.com/sudesh4545/mini-quick-notes-c46edd"
     }
   ]
 }
