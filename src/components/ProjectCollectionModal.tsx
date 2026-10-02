@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Clock3, ExternalLink, X } from 'lucide-react';
-import { useRef } from 'react';
+import { useRef, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { useFocusTrap } from '../hooks/useFocusTrap';
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll';
@@ -13,6 +13,19 @@ interface ProjectCollectionModalProps {
   collection: ProjectCollection | null;
   onClose: () => void;
 }
+
+const projectTones = [
+  { primary: '#00f0ff', secondary: '#2563eb' },
+  { primary: '#ff3bd4', secondary: '#9333ea' },
+  { primary: '#a855f7', secondary: '#4f46e5' },
+  { primary: '#ef4444', secondary: '#7f1d1d' },
+  { primary: '#e879f9', secondary: '#6366f1' },
+  { primary: '#f43f5e', secondary: '#be123c' },
+  { primary: '#34d399', secondary: '#0891b2' },
+  { primary: '#fb7185', secondary: '#7c3aed' },
+  { primary: '#8b5cf6', secondary: '#ec4899' },
+  { primary: '#60a5fa', secondary: '#1d4ed8' },
+] as const;
 
 export function ProjectCollectionModal({ collection, onClose }: ProjectCollectionModalProps) {
   const panelRef = useRef<HTMLDivElement | null>(null);
@@ -47,8 +60,10 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.985 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel relative z-10 max-h-[94dvh] w-full max-w-5xl touch-pan-y overflow-y-auto overscroll-contain rounded-3xl"
+            className="collection-modal glass-panel relative z-10 max-h-[94dvh] w-full max-w-5xl touch-pan-y overflow-y-auto overscroll-contain rounded-3xl"
+            style={{ '--modal-accent': collection.id === 'small-projects' ? '#00f0ff' : '#a855f7' } as CSSProperties}
           >
+            <span aria-hidden="true" className="collection-modal-glow pointer-events-none absolute -top-36 left-1/2 h-72 w-3/4 -translate-x-1/2 rounded-full" />
             <div className="sticky top-0 z-20 flex items-start justify-between gap-5 border-b border-white/[0.07] bg-ink/90 p-5 backdrop-blur-xl sm:p-7">
               <div className="flex min-w-0 items-start gap-4">
                 <span className={cn('hidden size-12 shrink-0 items-center justify-center rounded-2xl border sm:flex', accentMap[collection.accent].chip)}>
@@ -78,13 +93,30 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
 
             <div className="p-5 sm:p-7">
               <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {collection.items.map((item) => (
-                  <li key={item.id} className="glass-well flex min-h-48 flex-col rounded-2xl p-5">
+                {collection.items.map((item, index) => {
+                  const itemTone = projectTones[index % projectTones.length];
+                  const itemStyle = {
+                    '--project-primary': itemTone.primary,
+                    '--project-secondary': itemTone.secondary,
+                  } as CSSProperties;
+
+                  return (
+                  <motion.li
+                    key={item.id}
+                    className="collection-project-card group/project relative flex min-h-48 flex-col overflow-hidden rounded-2xl p-5"
+                    style={itemStyle}
+                    initial={prefersReduced ? false : { opacity: 0, y: 22, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.45, delay: prefersReduced ? 0 : Math.min(index * 0.045, 0.32), ease: [0.16, 1, 0.3, 1] }}
+                    whileHover={prefersReduced ? undefined : { y: -6, scale: 1.015 }}
+                  >
+                    <span aria-hidden="true" className="project-card-glow pointer-events-none absolute -top-14 -right-12 size-36 rounded-full" />
+                    <span aria-hidden="true" className="project-card-sweep pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12" />
                     <div className="flex items-center justify-between gap-3">
-                      <span className={cn('font-display text-[0.62rem] font-bold tracking-[0.17em]', accentMap[collection.accent].text)}>
+                      <span className="project-card-accent font-display text-[0.62rem] font-bold tracking-[0.17em]">
                         {item.index}
                       </span>
-                      <span className={cn('inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 font-display text-[0.52rem] font-bold tracking-[0.13em] uppercase', accentMap[collection.accent].chip)}>
+                      <span className="project-card-status inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 font-display text-[0.52rem] font-bold tracking-[0.13em] uppercase">
                         <Clock3 aria-hidden="true" className="size-3" />
                         {item.status === 'coming-soon' ? 'Coming soon' : 'Published'}
                       </span>
@@ -93,7 +125,7 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
                     <p className="mt-2 flex-1 text-[0.76rem] leading-relaxed text-muted">{item.description}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.technologies.map((technology) => (
-                        <span key={technology} className="rounded-md border border-white/[0.08] px-2 py-1 text-[0.6rem] text-faint">
+                          <span key={technology} className="project-card-tech rounded-md border px-2 py-1 text-[0.6rem]">
                           {technology}
                         </span>
                       ))}
@@ -104,8 +136,10 @@ export function ProjectCollectionModal({ collection, onClose }: ProjectCollectio
                         {item.githubUrl && <a href={item.githubUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs text-paper">Code <ArrowUpRight className="size-3" /></a>}
                       </div>
                     )}
-                  </li>
-                ))}
+                    <ArrowUpRight aria-hidden="true" className="project-card-arrow absolute right-5 bottom-5 size-4 opacity-60 transition-transform duration-300 group-hover/project:-translate-y-0.5 group-hover/project:translate-x-0.5 group-hover/project:opacity-100" />
+                  </motion.li>
+                  );
+                })}
               </ul>
             </div>
           </motion.div>

@@ -18,6 +18,7 @@ export function BackgroundEffects() {
 
       <div className="theme-aurora theme-aurora-cyan absolute -top-40 -left-44 size-[32rem] rounded-full bg-brand-cyan/6 blur-[90px]" />
       <div className="theme-aurora theme-aurora-pink absolute top-[28%] -right-48 size-[34rem] rounded-full bg-brand-magenta/7 blur-[100px]" />
+      <div className="theme-red-glow absolute top-[58%] -left-56 size-[34rem] rounded-full blur-[110px]" />
 
       {/* Aurora blobs — big soft washes. Radii kept moderate: over near-black
           a 100px blur reads the same as 150px but paints a far smaller layer. */}
