@@ -1,4 +1,19 @@
 {
   "small": [],
-  "mini": []
+  "mini": [
+    {
+      "id": "mini-01-weather-app",
+      "index": "01",
+      "title": "Weather App",
+      "description": "Live city weather with saved locations, hourly insights and a seven-day forecast.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-weather-app-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-weather-app-mini-0"
+    }
+  ]
 }
