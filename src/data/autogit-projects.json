@@ -28,6 +28,20 @@
       ],
       "demoUrl": null,
       "githubUrl": "https://github.com/sudesh4545/mini-color-switch-demo-d6e55b"
+    },
+    {
+      "id": "aa108b69-2567-4cd1-bd22-6aa7b7c0def9",
+      "index": "03",
+      "title": "Focus Counter",
+      "description": "A simple focus-session counter that saves progress in the browser.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": null,
+      "githubUrl": "https://github.com/sudesh4545/mini-focus-counter-aa108b"
     }
   ]
 }
