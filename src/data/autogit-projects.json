@@ -56,6 +56,20 @@
       ],
       "demoUrl": null,
       "githubUrl": "https://github.com/sudesh4545/mini-quick-notes-c46edd"
+    },
+    {
+      "id": "69a1bd8e-80e7-4002-a8d4-c57e91b726e5",
+      "index": "05",
+      "title": "Focus Counter",
+      "description": "A compact focus timer and session counter.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": null,
+      "githubUrl": "https://github.com/sudesh4545/mini-focus-counter-69a1bd"
     }
   ]
 }
