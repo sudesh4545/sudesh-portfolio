@@ -1,0 +1,19 @@
+{
+  "small": [],
+  "mini": [
+    {
+      "id": "32e9c111-ac67-4fa4-b981-ab123b1635d2",
+      "index": "01",
+      "title": "Pulse Timer Demo",
+      "description": "A compact countdown timer built to test the AutoGit publishing pipeline.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": null,
+      "githubUrl": "https://github.com/sudesh4545/mini-pulse-timer-demo-32e9c1"
+    }
+  ]
+}
