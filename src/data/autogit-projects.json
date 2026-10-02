@@ -14,6 +14,20 @@
       ],
       "demoUrl": null,
       "githubUrl": "https://github.com/sudesh4545/mini-pulse-timer-demo-32e9c1"
+    },
+    {
+      "id": "d6e55bab-c120-4d02-904b-18dc3dadcb6a",
+      "index": "02",
+      "title": "Color Switch Demo",
+      "description": "A tiny interactive accent switcher used to test scheduled AutoGit publishing.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": null,
+      "githubUrl": "https://github.com/sudesh4545/mini-color-switch-demo-d6e55b"
     }
   ]
 }
