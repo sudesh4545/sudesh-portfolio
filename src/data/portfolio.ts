@@ -30,11 +30,13 @@ import type {
   PersonalInfo,
   Project,
   ProjectCollection,
+  ProjectCollectionItem,
   Skill,
   SocialLink,
   Stat,
 } from '../types';
 import liveStats from './live-stats.json';
+import autogitProjects from './autogit-projects.json';
 
 const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
@@ -295,6 +297,8 @@ const comingSoonProjects = (prefix: 'small' | 'mini', label: string) =>
  * Secondary project collections. Replace any generated item with real project
  * details when it is ready; the collection modal and links update automatically.
  */
+const publishedAutogit = autogitProjects as { small: ProjectCollectionItem[]; mini: ProjectCollectionItem[] };
+
 export const projectCollections: ProjectCollection[] = [
   {
     id: 'small-projects',
@@ -303,7 +307,7 @@ export const projectCollections: ProjectCollection[] = [
     description: 'Focused builds, UI experiments and practical utilities created to sharpen individual skills.',
     icon: 'puzzle',
     accent: 'cyan',
-    items: comingSoonProjects('small', 'Small Project'),
+    items: [...publishedAutogit.small, ...comingSoonProjects('small', 'Small Project').slice(publishedAutogit.small.length)],
   },
   {
     id: 'mini-projects',
@@ -312,7 +316,7 @@ export const projectCollections: ProjectCollection[] = [
     description: 'Compact end-to-end applications that combine multiple concepts into complete working experiences.',
     icon: 'layers',
     accent: 'purple',
-    items: comingSoonProjects('mini', 'Mini Project'),
+    items: [...publishedAutogit.mini, ...comingSoonProjects('mini', 'Mini Project').slice(publishedAutogit.mini.length)],
   },
 ];
 
