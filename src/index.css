@@ -66,29 +66,34 @@
 }
 
 html[data-theme='dark'] {
-  --color-ink: #080a0f;
-  --color-surface: #10131a;
-  --color-surface-2: #181c25;
-  --color-paper: #f2f4f8;
-  --color-muted: #a1a8b5;
-  --color-faint: #6f7887;
-  --background: #080a0f;
-  --surface: #10131a;
-  --surface-light: #181c25;
-  --white: #f2f4f8;
-  --muted: #a1a8b5;
-  --border: rgba(174, 188, 211, 0.12);
-  --trace-start: #4ddbe8;
-  --trace-mid: #5f7da8;
-  --trace-end: #7e7194;
-  --grid-x: rgba(95, 155, 181, 0.075);
-  --grid-y: rgba(122, 111, 146, 0.055);
+  --color-ink: #070708;
+  --color-surface: #111214;
+  --color-surface-2: #191a1d;
+  --color-paper: #e8eaed;
+  --color-muted: #9aa0a6;
+  --color-faint: #6f7378;
+  --color-brand-cyan: #8ab4f8;
+  --color-brand-blue: #669df6;
+  --color-brand-purple: #a7a0b4;
+  --color-brand-magenta: #aa8fa1;
+  --background: #070708;
+  --surface: #111214;
+  --surface-light: #191a1d;
+  --cyan: #8ab4f8;
+  --purple: #a7a0b4;
+  --magenta: #aa8fa1;
+  --white: #e8eaed;
+  --muted: #9aa0a6;
+  --border: rgba(232, 234, 237, 0.11);
+  --trace-start: #49525d;
+  --trace-mid: #3d4249;
+  --trace-end: #50474e;
+  --grid-x: rgba(170, 176, 184, 0.045);
+  --grid-y: rgba(170, 176, 184, 0.035);
   --theme-background:
-    radial-gradient(80% 65% at 0% 0%, #111d28 0%, transparent 60%),
-    radial-gradient(70% 55% at 100% 18%, #17131d 0%, transparent 64%),
-    radial-gradient(52% 45% at 8% 72%, rgba(86, 15, 24, .14) 0%, transparent 72%),
-    linear-gradient(145deg, #07090d 0%, #0a0d12 52%, #0d0c12 100%);
-  --theme-vignette: radial-gradient(76% 62% at 50% 42%, transparent 30%, rgba(0,0,0,.46) 100%);
+    radial-gradient(70% 50% at 50% -8%, rgba(64, 68, 74, .2) 0%, transparent 70%),
+    linear-gradient(145deg, #050506 0%, #090a0b 52%, #0c0c0e 100%);
+  --theme-vignette: radial-gradient(76% 62% at 50% 42%, transparent 22%, rgba(0,0,0,.66) 100%);
 }
 
 html[data-theme='light'] {
@@ -539,14 +544,70 @@ html[data-theme='light'] {
    overrides win without changing component markup or layout. */
 html[data-theme='dark'] .glass,
 html[data-theme='dark'] .glass-panel {
-  background: linear-gradient(145deg, rgba(82, 118, 142, .035), rgba(24, 26, 34, .02)), #0d1016;
-  border-color: rgba(164, 180, 202, .12);
-  box-shadow: inset 0 1px rgba(255,255,255,.045), 0 24px 60px -38px rgba(0,0,0,.8);
+  background: linear-gradient(145deg, rgba(255,255,255,.025), transparent 58%), #101113;
+  border-color: rgba(232,234,237,.1);
+  box-shadow: inset 0 1px rgba(255,255,255,.045), 0 24px 60px -38px rgba(0,0,0,.95);
 }
 
 html[data-theme='dark'] .glass-well {
-  background: linear-gradient(155deg, #0c1017, #111018);
-  border-color: rgba(164, 180, 202, .1);
+  background: linear-gradient(155deg, #0d0e10, #141517);
+  border-color: rgba(232,234,237,.085);
+}
+
+html[data-theme='dark'] .collection-card {
+  background: linear-gradient(145deg, #111214, #0d0e10 58%, #141416);
+  border-color: rgba(232,234,237,.13);
+  box-shadow: inset 0 1px rgba(255,255,255,.045), 0 24px 60px -38px rgba(0,0,0,.95);
+}
+
+html[data-theme='dark'] .collection-card:hover {
+  border-color: rgba(138,180,248,.38);
+  box-shadow: 0 24px 60px -34px rgba(0,0,0,.98), 0 0 26px -18px rgba(138,180,248,.5);
+}
+
+html[data-theme='dark'] .collection-card-orb {
+  background: #25272b;
+  opacity: .1;
+}
+
+html[data-theme='dark'] .collection-card-line {
+  background: linear-gradient(90deg, transparent, #565b63, transparent);
+  opacity: .38;
+}
+
+html[data-theme='dark'] .collection-preview-node {
+  background: #111214;
+  border-color: rgba(232,234,237,.14);
+  box-shadow: inset 0 0 15px rgba(255,255,255,.018);
+}
+
+html[data-theme='dark'] .collection-card:hover .collection-preview-node {
+  border-color: rgba(138,180,248,.34);
+  box-shadow: 0 0 15px rgba(138,180,248,.08), inset 0 0 14px rgba(138,180,248,.035);
+}
+
+html[data-theme='dark'] .theme-aurora,
+html[data-theme='dark'] .theme-red-glow {
+  opacity: .06;
+  filter: grayscale(1) blur(100px);
+}
+
+html[data-theme='dark'] .circuit-drift {
+  opacity: .1 !important;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #080809;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #555a61, #34373c);
+  border-color: #080809;
+  box-shadow: none;
+}
+
+html[data-theme='dark'] ::selection {
+  background: rgba(138, 180, 248, .28);
 }
 
 html[data-theme='light'] .glass,
