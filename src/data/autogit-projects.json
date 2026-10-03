@@ -30,6 +30,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-weather-app-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-weather-app-mini-0"
+    },
+    {
+      "id": "mini-02-password-generator",
+      "index": "02",
+      "title": "Password Generator",
+      "description": "A privacy-first password and passphrase generator with strength guidance.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-password-generator-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-password-generator-mini-0"
     }
   ]
 }
