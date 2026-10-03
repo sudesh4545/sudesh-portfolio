@@ -1,5 +1,21 @@
 {
-  "small": [],
+  "small": [
+    {
+      "id": "small-31-codeforge-academy",
+      "index": "01",
+      "title": "CodeForge Academy",
+      "description": "A self-contained TypeScript coding academy with ten guided lessons, live previews, runnable checks and persistent progress.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-codeforge-academy-small-/",
+      "githubUrl": "https://github.com/sudesh4545/mini-codeforge-academy-small-"
+    }
+  ],
   "mini": [
     {
       "id": "mini-01-weather-app",
