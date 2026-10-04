@@ -14,6 +14,21 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-codeforge-academy-small-/",
       "githubUrl": "https://github.com/sudesh4545/mini-codeforge-academy-small-"
+    },
+    {
+      "id": "small-32-frontend-quality-inspector",
+      "index": "02",
+      "title": "Frontend Quality Inspector",
+      "description": "A practical TypeScript audit workspace with thirty searchable quality checks, scoring, remediation guidance and report export.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-frontend-quality-inspector-small-/",
+      "githubUrl": "https://github.com/sudesh4545/mini-frontend-quality-inspector-small-"
     }
   ],
   "mini": [
