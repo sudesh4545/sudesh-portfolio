@@ -59,6 +59,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-password-generator-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-password-generator-mini-0"
+    },
+    {
+      "id": "mini-03-form-validation",
+      "index": "03",
+      "title": "Form Validation",
+      "description": "Accessible sign-up and login validation with friendly real-time feedback.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-form-validation-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-form-validation-mini-0"
     }
   ]
 }
