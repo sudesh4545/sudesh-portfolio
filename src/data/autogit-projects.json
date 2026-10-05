@@ -88,6 +88,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-form-validation-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-form-validation-mini-0"
+    },
+    {
+      "id": "mini-04-stopwatch-app",
+      "index": "04",
+      "title": "Stopwatch App",
+      "description": "A precise stopwatch with laps, session history and CSV export.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-stopwatch-app-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-stopwatch-app-mini-0"
     }
   ]
 }
