@@ -29,6 +29,21 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-frontend-quality-inspector-small-/",
       "githubUrl": "https://github.com/sudesh4545/mini-frontend-quality-inspector-small-"
+    },
+    {
+      "id": "small-33-interview-mastery-hub",
+      "index": "03",
+      "title": "Interview Mastery Hub",
+      "description": "A self-contained TypeScript interview practice hub with twenty-eight questions, notes, confidence tracking, bookmarks and mock timing.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-interview-mastery-hub-small-/",
+      "githubUrl": "https://github.com/sudesh4545/mini-interview-mastery-hub-small-"
     }
   ],
   "mini": [
