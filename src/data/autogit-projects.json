@@ -117,6 +117,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-stopwatch-app-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-stopwatch-app-mini-0"
+    },
+    {
+      "id": "mini-05-digital-piano",
+      "index": "05",
+      "title": "Digital Piano",
+      "description": "A playable two-octave browser piano with recording and keyboard controls.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-digital-piano-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-digital-piano-mini-0"
     }
   ]
 }
