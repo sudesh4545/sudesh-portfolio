@@ -44,6 +44,21 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-interview-mastery-hub-small-/",
       "githubUrl": "https://github.com/sudesh4545/mini-interview-mastery-hub-small-"
+    },
+    {
+      "id": "small-34-novaui-framework",
+      "index": "04",
+      "title": "NovaUI Framework",
+      "description": "A TypeScript component playground with nine component families, live design tokens, responsive previews and generated code.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-novaui-framework-small-/",
+      "githubUrl": "https://github.com/sudesh4545/mini-novaui-framework-small-"
     }
   ],
   "mini": [
