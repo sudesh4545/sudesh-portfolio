@@ -59,6 +59,21 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-novaui-framework-small-/",
       "githubUrl": "https://github.com/sudesh4545/mini-novaui-framework-small-"
+    },
+    {
+      "id": "small-35-developer-journey-roadmap",
+      "index": "05",
+      "title": "Developer Journey Roadmap",
+      "description": "An interactive TypeScript career roadmap with three tracks, twenty-one skills, embedded study guides, notes and progress export.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-developer-journey-roadmap-small-/",
+      "githubUrl": "https://github.com/sudesh4545/mini-developer-journey-roadmap-small-"
     }
   ],
   "mini": [
