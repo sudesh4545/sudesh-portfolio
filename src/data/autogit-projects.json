@@ -146,6 +146,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-digital-piano-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-digital-piano-mini-0"
+    },
+    {
+      "id": "mini-06-tip-calculator",
+      "index": "06",
+      "title": "Tip Calculator",
+      "description": "A clear bill, tax, tip and per-person split calculator.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-tip-calculator-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-tip-calculator-mini-0"
     }
   ]
 }
