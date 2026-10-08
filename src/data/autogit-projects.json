@@ -160,6 +160,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-tip-calculator-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-tip-calculator-mini-0"
+    },
+    {
+      "id": "mini-07-expense-tracker",
+      "index": "07",
+      "title": "Expense Tracker",
+      "description": "A local-first income and expense tracker with budgets, filters and export.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-expense-tracker-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-expense-tracker-mini-0"
     }
   ]
 }
