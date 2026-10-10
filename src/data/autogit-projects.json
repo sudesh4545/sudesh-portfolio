@@ -188,6 +188,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-movie-search-app-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-movie-search-app-mini-0"
+    },
+    {
+      "id": "mini-09-flashcard-learning-app",
+      "index": "09",
+      "title": "Flashcard Learning App",
+      "description": "A local flashcard study experience with decks, ratings and progress tracking.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-flashcard-learning-app-mini-0/",
+      "githubUrl": "https://github.com/sudesh4545/mini-flashcard-learning-app-mini-0"
     }
   ]
 }
