@@ -202,6 +202,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-flashcard-learning-app-mini-0/",
       "githubUrl": "https://github.com/sudesh4545/mini-flashcard-learning-app-mini-0"
+    },
+    {
+      "id": "mini-10-typing-speed-test",
+      "index": "10",
+      "title": "Typing Speed Test",
+      "description": "A responsive typing test with WPM, accuracy, weak-key insights and run history.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-typing-speed-test-mini-1/",
+      "githubUrl": "https://github.com/sudesh4545/mini-typing-speed-test-mini-1"
     }
   ]
 }
