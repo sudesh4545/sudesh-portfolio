@@ -216,6 +216,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-typing-speed-test-mini-1/",
       "githubUrl": "https://github.com/sudesh4545/mini-typing-speed-test-mini-1"
+    },
+    {
+      "id": "mini-11-drum-kit",
+      "index": "11",
+      "title": "Drum Kit",
+      "description": "An interactive drum kit with keyboard pads and a compact step sequencer.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-drum-kit-mini-1/",
+      "githubUrl": "https://github.com/sudesh4545/mini-drum-kit-mini-1"
     }
   ]
 }
