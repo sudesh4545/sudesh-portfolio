@@ -230,6 +230,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-drum-kit-mini-1/",
       "githubUrl": "https://github.com/sudesh4545/mini-drum-kit-mini-1"
+    },
+    {
+      "id": "mini-12-qr-code-generator",
+      "index": "12",
+      "title": "Qr Code Generator",
+      "description": "A flexible QR code generator supporting multiple payload types and downloads.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-qr-code-generator-mini-1/",
+      "githubUrl": "https://github.com/sudesh4545/mini-qr-code-generator-mini-1"
     }
   ]
 }
