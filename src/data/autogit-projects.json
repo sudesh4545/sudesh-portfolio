@@ -258,6 +258,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/mini-currency-converter-mini-1/",
       "githubUrl": "https://github.com/sudesh4545/mini-currency-converter-mini-1"
+    },
+    {
+      "id": "mini-14-image-gallery-modal",
+      "index": "14",
+      "title": "Image Gallery Modal",
+      "description": "A responsive image gallery with modal viewing, filtering and favourites.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/mini-image-gallery-modal-mini-1/",
+      "githubUrl": "https://github.com/sudesh4545/mini-image-gallery-modal-mini-1"
     }
   ]
 }
