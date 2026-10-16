@@ -272,6 +272,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/IMAGE-GALLERY-MODAL/",
       "githubUrl": "https://github.com/sudesh4545/IMAGE-GALLERY-MODAL"
+    },
+    {
+      "id": "mini-15-light-dark-mode-toggle",
+      "index": "15",
+      "title": "Light Dark Mode Toggle",
+      "description": "A theme playground with light, dark, system and accent controls.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/LIGHT-DARK-MODE-TOGGLE/",
+      "githubUrl": "https://github.com/sudesh4545/LIGHT-DARK-MODE-TOGGLE"
     }
   ]
 }
