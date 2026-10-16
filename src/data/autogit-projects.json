@@ -3,7 +3,7 @@
     {
       "id": "small-31-codeforge-academy",
       "index": "01",
-      "title": "CodeForge Academy",
+      "title": "CODEFORGE ACADEMY",
       "description": "A self-contained TypeScript coding academy with ten guided lessons, live previews, runnable checks and persistent progress.",
       "status": "published",
       "technologies": [
@@ -12,13 +12,13 @@
         "TypeScript",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-codeforge-academy-small-/",
-      "githubUrl": "https://github.com/sudesh4545/mini-codeforge-academy-small-"
+      "demoUrl": "https://sudesh4545.github.io/CODEFORGE-ACADEMY/",
+      "githubUrl": "https://github.com/sudesh4545/CODEFORGE-ACADEMY"
     },
     {
       "id": "small-32-frontend-quality-inspector",
       "index": "02",
-      "title": "Frontend Quality Inspector",
+      "title": "FRONTEND QUALITY INSPECTOR",
       "description": "A practical TypeScript audit workspace with thirty searchable quality checks, scoring, remediation guidance and report export.",
       "status": "published",
       "technologies": [
@@ -27,13 +27,13 @@
         "TypeScript",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-frontend-quality-inspector-small-/",
-      "githubUrl": "https://github.com/sudesh4545/mini-frontend-quality-inspector-small-"
+      "demoUrl": "https://sudesh4545.github.io/FRONTEND-QUALITY-INSPECTOR/",
+      "githubUrl": "https://github.com/sudesh4545/FRONTEND-QUALITY-INSPECTOR"
     },
     {
       "id": "small-33-interview-mastery-hub",
       "index": "03",
-      "title": "Interview Mastery Hub",
+      "title": "INTERVIEW MASTERY HUB",
       "description": "A self-contained TypeScript interview practice hub with twenty-eight questions, notes, confidence tracking, bookmarks and mock timing.",
       "status": "published",
       "technologies": [
@@ -42,13 +42,13 @@
         "TypeScript",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-interview-mastery-hub-small-/",
-      "githubUrl": "https://github.com/sudesh4545/mini-interview-mastery-hub-small-"
+      "demoUrl": "https://sudesh4545.github.io/INTERVIEW-MASTERY-HUB/",
+      "githubUrl": "https://github.com/sudesh4545/INTERVIEW-MASTERY-HUB"
     },
     {
       "id": "small-34-novaui-framework",
       "index": "04",
-      "title": "NovaUI Framework",
+      "title": "NOVAUI FRAMEWORK",
       "description": "A TypeScript component playground with nine component families, live design tokens, responsive previews and generated code.",
       "status": "published",
       "technologies": [
@@ -57,13 +57,13 @@
         "TypeScript",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-novaui-framework-small-/",
-      "githubUrl": "https://github.com/sudesh4545/mini-novaui-framework-small-"
+      "demoUrl": "https://sudesh4545.github.io/NOVAUI-FRAMEWORK/",
+      "githubUrl": "https://github.com/sudesh4545/NOVAUI-FRAMEWORK"
     },
     {
       "id": "small-35-developer-journey-roadmap",
       "index": "05",
-      "title": "Developer Journey Roadmap",
+      "title": "DEVELOPER JOURNEY ROADMAP",
       "description": "An interactive TypeScript career roadmap with three tracks, twenty-one skills, embedded study guides, notes and progress export.",
       "status": "published",
       "technologies": [
@@ -72,15 +72,15 @@
         "TypeScript",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-developer-journey-roadmap-small-/",
-      "githubUrl": "https://github.com/sudesh4545/mini-developer-journey-roadmap-small-"
+      "demoUrl": "https://sudesh4545.github.io/DEVELOPER-JOURNEY-ROADMAP/",
+      "githubUrl": "https://github.com/sudesh4545/DEVELOPER-JOURNEY-ROADMAP"
     }
   ],
   "mini": [
     {
       "id": "mini-01-weather-app",
       "index": "01",
-      "title": "Weather App",
+      "title": "WEATHER APP",
       "description": "Live city weather with saved locations, hourly insights and a seven-day forecast.",
       "status": "published",
       "technologies": [
@@ -88,13 +88,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-weather-app-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-weather-app-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/WEATHER-APP/",
+      "githubUrl": "https://github.com/sudesh4545/WEATHER-APP"
     },
     {
       "id": "mini-02-password-generator",
       "index": "02",
-      "title": "Password Generator",
+      "title": "PASSWORD GENERATOR",
       "description": "A privacy-first password and passphrase generator with strength guidance.",
       "status": "published",
       "technologies": [
@@ -102,13 +102,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-password-generator-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-password-generator-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/PASSWORD-GENERATOR/",
+      "githubUrl": "https://github.com/sudesh4545/PASSWORD-GENERATOR"
     },
     {
       "id": "mini-03-form-validation",
       "index": "03",
-      "title": "Form Validation",
+      "title": "FORM VALIDATION",
       "description": "Accessible sign-up and login validation with friendly real-time feedback.",
       "status": "published",
       "technologies": [
@@ -116,13 +116,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-form-validation-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-form-validation-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/FORM-VALIDATION/",
+      "githubUrl": "https://github.com/sudesh4545/FORM-VALIDATION"
     },
     {
       "id": "mini-04-stopwatch-app",
       "index": "04",
-      "title": "Stopwatch App",
+      "title": "STOPWATCH APP",
       "description": "A precise stopwatch with laps, session history and CSV export.",
       "status": "published",
       "technologies": [
@@ -130,13 +130,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-stopwatch-app-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-stopwatch-app-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/STOPWATCH-APP/",
+      "githubUrl": "https://github.com/sudesh4545/STOPWATCH-APP"
     },
     {
       "id": "mini-05-digital-piano",
       "index": "05",
-      "title": "Digital Piano",
+      "title": "DIGITAL PIANO",
       "description": "A playable two-octave browser piano with recording and keyboard controls.",
       "status": "published",
       "technologies": [
@@ -144,13 +144,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-digital-piano-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-digital-piano-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/DIGITAL-PIANO/",
+      "githubUrl": "https://github.com/sudesh4545/DIGITAL-PIANO"
     },
     {
       "id": "mini-06-tip-calculator",
       "index": "06",
-      "title": "Tip Calculator",
+      "title": "TIP CALCULATOR",
       "description": "A clear bill, tax, tip and per-person split calculator.",
       "status": "published",
       "technologies": [
@@ -158,13 +158,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-tip-calculator-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-tip-calculator-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/TIP-CALCULATOR/",
+      "githubUrl": "https://github.com/sudesh4545/TIP-CALCULATOR"
     },
     {
       "id": "mini-07-expense-tracker",
       "index": "07",
-      "title": "Expense Tracker",
+      "title": "EXPENSE TRACKER",
       "description": "A local-first income and expense tracker with budgets, filters and export.",
       "status": "published",
       "technologies": [
@@ -172,13 +172,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-expense-tracker-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-expense-tracker-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/EXPENSE-TRACKER/",
+      "githubUrl": "https://github.com/sudesh4545/EXPENSE-TRACKER"
     },
     {
       "id": "mini-08-movie-search-app",
       "index": "08",
-      "title": "Movie Search App",
+      "title": "MOVIE SEARCH APP",
       "description": "A polished movie discovery catalogue with regional filters, watchlist and official platform searches.",
       "status": "published",
       "technologies": [
@@ -186,13 +186,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-movie-search-app-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-movie-search-app-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/MOVIE-SEARCH-APP/",
+      "githubUrl": "https://github.com/sudesh4545/MOVIE-SEARCH-APP"
     },
     {
       "id": "mini-09-flashcard-learning-app",
       "index": "09",
-      "title": "Flashcard Learning App",
+      "title": "FLASHCARD LEARNING APP",
       "description": "A local flashcard study experience with decks, ratings and progress tracking.",
       "status": "published",
       "technologies": [
@@ -200,13 +200,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-flashcard-learning-app-mini-0/",
-      "githubUrl": "https://github.com/sudesh4545/mini-flashcard-learning-app-mini-0"
+      "demoUrl": "https://sudesh4545.github.io/FLASHCARD-LEARNING-APP/",
+      "githubUrl": "https://github.com/sudesh4545/FLASHCARD-LEARNING-APP"
     },
     {
       "id": "mini-10-typing-speed-test",
       "index": "10",
-      "title": "Typing Speed Test",
+      "title": "TYPING SPEED TEST",
       "description": "A responsive typing test with WPM, accuracy, weak-key insights and run history.",
       "status": "published",
       "technologies": [
@@ -214,13 +214,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-typing-speed-test-mini-1/",
-      "githubUrl": "https://github.com/sudesh4545/mini-typing-speed-test-mini-1"
+      "demoUrl": "https://sudesh4545.github.io/TYPING-SPEED-TEST/",
+      "githubUrl": "https://github.com/sudesh4545/TYPING-SPEED-TEST"
     },
     {
       "id": "mini-11-drum-kit",
       "index": "11",
-      "title": "Drum Kit",
+      "title": "DRUM KIT",
       "description": "An interactive drum kit with keyboard pads and a compact step sequencer.",
       "status": "published",
       "technologies": [
@@ -228,13 +228,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-drum-kit-mini-1/",
-      "githubUrl": "https://github.com/sudesh4545/mini-drum-kit-mini-1"
+      "demoUrl": "https://sudesh4545.github.io/DRUM-KIT/",
+      "githubUrl": "https://github.com/sudesh4545/DRUM-KIT"
     },
     {
       "id": "mini-12-qr-code-generator",
       "index": "12",
-      "title": "Qr Code Generator",
+      "title": "QR CODE GENERATOR",
       "description": "A flexible QR code generator supporting multiple payload types and downloads.",
       "status": "published",
       "technologies": [
@@ -242,13 +242,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-qr-code-generator-mini-1/",
-      "githubUrl": "https://github.com/sudesh4545/mini-qr-code-generator-mini-1"
+      "demoUrl": "https://sudesh4545.github.io/QR-CODE-GENERATOR/",
+      "githubUrl": "https://github.com/sudesh4545/QR-CODE-GENERATOR"
     },
     {
       "id": "mini-13-currency-converter",
       "index": "13",
-      "title": "Currency Converter",
+      "title": "CURRENCY CONVERTER",
       "description": "A dated exchange-rate converter with clear currency comparisons.",
       "status": "published",
       "technologies": [
@@ -256,13 +256,13 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-currency-converter-mini-1/",
-      "githubUrl": "https://github.com/sudesh4545/mini-currency-converter-mini-1"
+      "demoUrl": "https://sudesh4545.github.io/CURRENCY-CONVERTER/",
+      "githubUrl": "https://github.com/sudesh4545/CURRENCY-CONVERTER"
     },
     {
       "id": "mini-14-image-gallery-modal",
       "index": "14",
-      "title": "Image Gallery Modal",
+      "title": "IMAGE GALLERY MODAL",
       "description": "A responsive image gallery with modal viewing, filtering and favourites.",
       "status": "published",
       "technologies": [
@@ -270,8 +270,8 @@
         "CSS",
         "JavaScript"
       ],
-      "demoUrl": "https://sudesh4545.github.io/mini-image-gallery-modal-mini-1/",
-      "githubUrl": "https://github.com/sudesh4545/mini-image-gallery-modal-mini-1"
+      "demoUrl": "https://sudesh4545.github.io/IMAGE-GALLERY-MODAL/",
+      "githubUrl": "https://github.com/sudesh4545/IMAGE-GALLERY-MODAL"
     }
   ]
 }
