@@ -286,6 +286,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/LIGHT-DARK-MODE-TOGGLE/",
       "githubUrl": "https://github.com/sudesh4545/LIGHT-DARK-MODE-TOGGLE"
+    },
+    {
+      "id": "mini-16-scroll-progress-bar",
+      "index": "16",
+      "title": "Scroll Progress Bar",
+      "description": "A scroll progress demonstration with section tracking and smooth navigation.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/SCROLL-PROGRESS-BAR/",
+      "githubUrl": "https://github.com/sudesh4545/SCROLL-PROGRESS-BAR"
     }
   ]
 }
