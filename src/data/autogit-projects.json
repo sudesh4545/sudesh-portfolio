@@ -300,6 +300,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/SCROLL-PROGRESS-BAR/",
       "githubUrl": "https://github.com/sudesh4545/SCROLL-PROGRESS-BAR"
+    },
+    {
+      "id": "mini-17-clipboard-copy-tool",
+      "index": "17",
+      "title": "Clipboard Copy Tool",
+      "description": "A clipboard productivity tool with reusable snippets and copy history.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/CLIPBOARD-COPY-TOOL/",
+      "githubUrl": "https://github.com/sudesh4545/CLIPBOARD-COPY-TOOL"
     }
   ]
 }
