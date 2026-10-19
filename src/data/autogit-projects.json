@@ -314,6 +314,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/CLIPBOARD-COPY-TOOL/",
       "githubUrl": "https://github.com/sudesh4545/CLIPBOARD-COPY-TOOL"
+    },
+    {
+      "id": "mini-18-text-to-speech-converter",
+      "index": "18",
+      "title": "Text To Speech Converter",
+      "description": "A browser text-to-speech studio with voice, speed and pitch controls.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/TEXT-TO-SPEECH-CONVERTER/",
+      "githubUrl": "https://github.com/sudesh4545/TEXT-TO-SPEECH-CONVERTER"
     }
   ]
 }
