@@ -328,6 +328,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/TEXT-TO-SPEECH-CONVERTER/",
       "githubUrl": "https://github.com/sudesh4545/TEXT-TO-SPEECH-CONVERTER"
+    },
+    {
+      "id": "mini-19-product-filter-list",
+      "index": "19",
+      "title": "Product Filter List",
+      "description": "A fast product catalogue with live search, category filters and sorting.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/PRODUCT-FILTER-LIST/",
+      "githubUrl": "https://github.com/sudesh4545/PRODUCT-FILTER-LIST"
     }
   ]
 }
