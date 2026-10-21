@@ -342,6 +342,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/PRODUCT-FILTER-LIST/",
       "githubUrl": "https://github.com/sudesh4545/PRODUCT-FILTER-LIST"
+    },
+    {
+      "id": "mini-20-music-player-app",
+      "index": "20",
+      "title": "Music Player App",
+      "description": "A compact browser music player with playlist, progress and playback controls.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/MUSIC-PLAYER-APP/",
+      "githubUrl": "https://github.com/sudesh4545/MUSIC-PLAYER-APP"
     }
   ]
 }
