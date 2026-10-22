@@ -356,6 +356,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/MUSIC-PLAYER-APP/",
       "githubUrl": "https://github.com/sudesh4545/MUSIC-PLAYER-APP"
+    },
+    {
+      "id": "mini-21-kanban-task-board",
+      "index": "21",
+      "title": "Kanban Task Board",
+      "description": "A local Kanban board with editable tasks, priorities and drag-friendly workflow.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/KANBAN-TASK-BOARD/",
+      "githubUrl": "https://github.com/sudesh4545/KANBAN-TASK-BOARD"
     }
   ]
 }
