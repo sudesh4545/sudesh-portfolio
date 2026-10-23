@@ -370,6 +370,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/KANBAN-TASK-BOARD/",
       "githubUrl": "https://github.com/sudesh4545/KANBAN-TASK-BOARD"
+    },
+    {
+      "id": "mini-22-pomodoro-focus-timer",
+      "index": "22",
+      "title": "Pomodoro Focus Timer",
+      "description": "A Pomodoro focus timer with configurable sessions and progress history.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/POMODORO-FOCUS-TIMER/",
+      "githubUrl": "https://github.com/sudesh4545/POMODORO-FOCUS-TIMER"
     }
   ]
 }
