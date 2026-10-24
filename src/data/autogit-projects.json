@@ -384,6 +384,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/POMODORO-FOCUS-TIMER/",
       "githubUrl": "https://github.com/sudesh4545/POMODORO-FOCUS-TIMER"
+    },
+    {
+      "id": "mini-23-habit-streak-tracker",
+      "index": "23",
+      "title": "Habit Streak Tracker",
+      "description": "A habit dashboard with flexible schedules, streaks, weekly history and coaching prompts.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/HABIT-STREAK-TRACKER/",
+      "githubUrl": "https://github.com/sudesh4545/HABIT-STREAK-TRACKER"
     }
   ]
 }
