@@ -398,6 +398,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/HABIT-STREAK-TRACKER/",
       "githubUrl": "https://github.com/sudesh4545/HABIT-STREAK-TRACKER"
+    },
+    {
+      "id": "mini-24-markdown-notes-editor",
+      "index": "24",
+      "title": "Markdown Notes Editor",
+      "description": "A distraction-free Markdown notes editor with local storage and preview.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/MARKDOWN-NOTES-EDITOR/",
+      "githubUrl": "https://github.com/sudesh4545/MARKDOWN-NOTES-EDITOR"
     }
   ]
 }
