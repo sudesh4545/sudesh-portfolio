@@ -412,6 +412,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/MARKDOWN-NOTES-EDITOR/",
       "githubUrl": "https://github.com/sudesh4545/MARKDOWN-NOTES-EDITOR"
+    },
+    {
+      "id": "mini-25-color-gradient-studio",
+      "index": "25",
+      "title": "Color Gradient Studio",
+      "description": "A colour and gradient studio with palette controls and reusable CSS output.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/COLOR-GRADIENT-STUDIO/",
+      "githubUrl": "https://github.com/sudesh4545/COLOR-GRADIENT-STUDIO"
     }
   ]
 }
