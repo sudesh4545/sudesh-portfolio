@@ -426,6 +426,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/COLOR-GRADIENT-STUDIO/",
       "githubUrl": "https://github.com/sudesh4545/COLOR-GRADIENT-STUDIO"
+    },
+    {
+      "id": "mini-26-json-formatter-validator",
+      "index": "26",
+      "title": "Json Formatter Validator",
+      "description": "A JSON formatter, validator and inspection utility with helpful error feedback.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/JSON-FORMATTER-VALIDATOR/",
+      "githubUrl": "https://github.com/sudesh4545/JSON-FORMATTER-VALIDATOR"
     }
   ]
 }
