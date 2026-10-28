@@ -440,6 +440,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/JSON-FORMATTER-VALIDATOR/",
       "githubUrl": "https://github.com/sudesh4545/JSON-FORMATTER-VALIDATOR"
+    },
+    {
+      "id": "mini-27-unit-converter",
+      "index": "27",
+      "title": "Unit Converter",
+      "description": "A multi-category unit converter with quick swaps and readable results.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/UNIT-CONVERTER/",
+      "githubUrl": "https://github.com/sudesh4545/UNIT-CONVERTER"
     }
   ]
 }
