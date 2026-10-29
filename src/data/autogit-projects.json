@@ -454,6 +454,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/UNIT-CONVERTER/",
       "githubUrl": "https://github.com/sudesh4545/UNIT-CONVERTER"
+    },
+    {
+      "id": "mini-28-memory-match-game",
+      "index": "28",
+      "title": "Memory Match Game",
+      "description": "A responsive memory matching game with difficulty and performance tracking.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/MEMORY-MATCH-GAME/",
+      "githubUrl": "https://github.com/sudesh4545/MEMORY-MATCH-GAME"
     }
   ]
 }
