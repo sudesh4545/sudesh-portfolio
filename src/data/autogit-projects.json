@@ -468,6 +468,20 @@
       ],
       "demoUrl": "https://sudesh4545.github.io/MEMORY-MATCH-GAME/",
       "githubUrl": "https://github.com/sudesh4545/MEMORY-MATCH-GAME"
+    },
+    {
+      "id": "mini-29-image-compressor-resizer",
+      "index": "29",
+      "title": "Image Compressor Resizer",
+      "description": "A private in-browser image compressor and resizer with comparison details.",
+      "status": "published",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demoUrl": "https://sudesh4545.github.io/IMAGE-COMPRESSOR-RESIZER/",
+      "githubUrl": "https://github.com/sudesh4545/IMAGE-COMPRESSOR-RESIZER"
     }
   ]
 }
